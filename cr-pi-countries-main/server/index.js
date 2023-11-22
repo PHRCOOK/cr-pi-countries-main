@@ -5,7 +5,6 @@ const PORT = 3001;
 
 const populateDb = require("./src/controllers/populateDb.js");
 
-// Syncing all the models at once.
 conn.sync({ alter: true, force: false }).then(() => {
   //con {force: true} se dropean todas las tablas al levantar el server
   server.listen(PORT, async () => {
