@@ -1,0 +1,48 @@
+.principalContainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    margin-left: 270px;
+    padding: 15px;
+    padding-top: 5px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    min-height: calc(100vh - 42px - 103px);
+}
+
+.pageSelector{
+    flex-grow: 0;
+    margin-left: -40px;
+    margin-bottom: 5px;
+    border-radius: 15px;
+    background-color: #333b;
+    border: #333 solid 3px;
+}
+
+.btnPage {
+    background-color: #aaa0;
+    border : #3330 solid 3px;
+    width: 30px;
+    color: #eee;
+    font-size: smaller;
+}
+
+.btnPage:hover {
+    background-color: #222e;
+    border : #333 outset 3px;
+    border-radius: 3px;
+}
+
+.btnPage:active {
+    background-color: #777;
+    border : #aaa inset 3px;
+    border-radius: 3px;
+}
+
+.btnPageSelected{
+    background-color: #333;
+    color: #eee;
+    border : #aaa solid 3px;
+    border-radius: 3px;
+}

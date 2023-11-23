@@ -1,0 +1,219 @@
+.principalContainer {
+    display: flex;
+    justify-content: center;
+    min-height: calc(-145px + 100vh);
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-width: 40vw;
+    width: 50vw;
+    height: 500px;
+    justify-content: flex-start;
+    align-items:center;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    border: #333 solid 3px;
+    border-radius: 30px;
+    background-color: #333d;
+}
+
+.titleContainer{
+    background-color: #333;
+    border: #333 solid 3px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    width: 100%;
+}
+
+.title{
+    color: #eee;
+}
+
+.form {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.itemList{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+.label {
+    align-self: start;
+    color: #eee;
+    font-size: 18px;
+}
+
+.item {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5px;
+}
+
+.name:hover::after{
+    content: attr(title);
+    background-color: black;
+    color: white;
+    padding: 5px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+.name{
+    background: #ddd;
+    border: 1px solid aliceblue;
+    color: #333;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 200px;
+    height: 22px;
+}
+.duration:hover::after{
+    content: attr(title);
+    background-color: black;
+    color: white;
+    padding: 5px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+.duration{
+    background: #ddd;
+    border: 1px solid aliceblue;
+    color: #333;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 200px;
+    height: 22px;
+}
+
+.x {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    padding-left: 10px;
+}
+
+.input {
+    background: #ddd;
+    border: 1px solid aliceblue;
+    color: #333;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 200px;
+    height: 22px;
+}
+
+.input:focus {
+    border: 1px solid aliceblue
+}
+
+
+.flagBox {
+    margin-right: 30px;
+    padding: 10px 20px;
+    height: 50px;
+}
+
+.btnDelete {
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+    background-color: #ddd;
+    border-radius: 3px;
+    border: #aaa outset 1px;;
+    margin-left: 3px;
+}
+
+.btnDelete:hover {
+    visibility: visible;
+    cursor: pointer;
+    background-color: rgb(223, 0, 0);
+    color: #aaa;
+    border: #f00 outset 1px;
+    transition: filter 250ms;
+}
+
+.btnDelete:active {
+    cursor: pointer;
+    background-color: rgb(223, 0, 0);
+    color: #aaa;
+    border: #f00 outset 1px;
+    transition: filter 250ms;
+    filter: brightness(90%)
+}
+
+.span{
+    color: #eee;
+    width: 65px;
+    height: 30px;
+    margin-right: 3px;
+    border: #aaa solid 2px;
+    border-radius: 3px;
+    padding-left: 2px;
+    padding-top: 1px;
+    padding-right: 0px;
+    padding-bottom: 3px;
+    font-size:smaller;
+    cursor:default;
+    text-shadow:2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+}
+
+.span:hover {
+    filter: brightness(110%)
+}
+
+img:hover::after {
+    content: attr(title);
+    background-color: black;
+    color: white;
+    padding: 5px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+.btn {
+    position: relative;
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+    transition: filter 250ms;
+    user-select: none;
+    touch-action: manipulation;
+    top: 25px;
+}
+
+.btn:hover {
+    filter: brightness(110%);
+}
+
+.btn:active {
+    filter: brightness(90%);
+}
+
+.front {
+    padding: 10px 25px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #aaa;
+    color: #333;
+    background: #ddd;
+    border: 1px solid aliceblue;
+}

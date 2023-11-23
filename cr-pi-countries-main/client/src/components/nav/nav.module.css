@@ -1,0 +1,219 @@
+.headerContainer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    margin-top: 1 rem;
+    padding: 2px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    border-bottom: 1px solid #dee2e6;
+}
+.headerContainer h1{
+    padding: 1px;
+    margin: 10px
+}
+.navBar{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 3px;
+}
+
+.menuContainer {
+    float: left;
+    width: 200px;
+    margin-left: 10px;
+}
+
+.menuOrder{
+    margin-bottom: 20px;
+    margin-top: 10px;
+    border: #333 solid 3px;
+    background-color: #333b;
+    border-radius: 10px;
+    height: 200px;
+}
+
+.criterioConainer{
+    margin-top: 5px;
+    margin-left: 45px;
+    margin-right: 35px;
+}
+
+.criterioConainer div {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+   
+}
+.menuOrder input,label {
+    color: #eee;
+    align-content: flex-start;
+    cursor: pointer;
+}
+.menuOrder button{
+    background-color: #333;
+    color: #eee;
+    border: #999 solid 3px;
+    border-radius: 13px;
+    margin-top: 5px;
+    padding: 3px;
+    cursor: pointer;
+    outline-offset: 4px;
+    transition: filter 250ms;
+    user-select: none;
+    touch-action: manipulation;
+}
+.menuOrder button:hover {
+    border: #bbb outset 3px;
+    color: #fff;
+    background-color: #222;
+    filter: brightness(110%);
+}
+
+.menuOrder button:active {
+    border: #bbb inset 3px;
+    background-color: #444;
+    filter: brightness(90%);
+}
+
+
+.menuFilter{
+    margin-bottom: 10px;
+    margin-top: 5px;
+    border: #333 solid 3px;
+    background-color: #333b;
+    border-radius: 10px;
+    height: 220px;
+}
+
+.menuFilter button{
+    background-color: #333;
+    color: #eee;
+    border: #999 solid 3px;
+    border-radius: 13px;
+    margin-top: 10px;
+    padding: 8px;
+    cursor: pointer;
+    outline-offset: 4px;
+    transition: filter 250ms;
+    user-select: none;
+    touch-action: manipulation;
+}
+
+.menuFilter select{
+    background-color: #333;
+    color: #eee;
+    border: #999 solid 3px;
+    border-radius: 13px;
+    margin-top: 10px;
+    padding: 3px;
+    cursor: pointer;
+    outline-offset: 4px;
+    transition: filter 250ms;
+    user-select: none;
+    touch-action: manipulation;
+    max-width:150px;
+}
+
+.menuFilter button:hover {
+    border: #bbb outset 3px;
+    color: #fff;
+    background-color: #222;
+    filter: brightness(110%);
+}
+
+.menuFilter button:active {
+    border: #bbb inset 3px;
+    background-color: #444;
+    filter: brightness(90%);
+}
+
+.menuTitle {
+    padding : 1px;
+    background-color: #333;
+    color: #fff
+}
+
+.goToHome{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 400;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: #dee2e6 solid 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+    outline-offset: 4px;
+    transition: filter 250ms;
+    user-select: none;
+    touch-action: manipulation;
+}
+.goToHome:hover {
+    background-color: #444;
+    filter: brightness(110%);
+}
+
+.goToHome:active {
+    background-color: #444;
+    filter: brightness(90%);
+}
+
+.goToActivities{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 400;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: #dee2e6 solid 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+    outline-offset: 4px;
+    transition: filter 250ms;
+    user-select: none;
+    touch-action: manipulation;
+}
+
+.goToActivities:hover {
+    background-color: #444;
+    filter: brightness(110%);
+}
+
+.goToActivities:active {
+    background-color: #444;
+    filter: brightness(90%);
+}
+
+.findCountry{
+    background-color: #333;
+    color: #fff;
+    font-weight: 400;
+    margin-left: 10px;
+    border-radius: 5px;
+    border: #dee2e6 solid 3px;
+    padding: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+    outline-offset: 4px;
+    transition: filter 250ms;
+    user-select: none;
+    touch-action: manipulation;
+}
+.findCountry:hover {
+    background-color: #444;
+    filter: brightness(110%);
+}
+
+.findCountry:active {
+    background-color: #444;
+    filter: brightness(90%);
+}
