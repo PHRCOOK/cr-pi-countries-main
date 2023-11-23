@@ -26,10 +26,10 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  background-image: url("C:\Users\USUARIO\Desktop\cr-pi-countries-main\cr-pi-countries-main\client\src\assets\Ciudades.jpg");
+  background-image: url("C:\Users\USUARIO\Desktop\cr-pi-countries-main\cr-pi-countries-main\client\src\assets\Ciudades2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
 }
 
 h1 {
