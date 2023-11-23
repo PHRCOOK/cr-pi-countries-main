@@ -11,13 +11,13 @@ const LandingPage = () => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.imageContainer}>
-        <img className={styles.img2} src={mundo} alt="imagen del mundo" />
-      </div>
       <div>
         <button className={styles.buttonInicio} onClick={goToHome}>
-          Inicio
+          INICIA TU AVENTURA
         </button>
+      </div>
+      <div className={styles.imageContainer}>
+        <img className={styles.img2} src={mundo} alt="imagen del mundo" />
       </div>
     </div>
   );
