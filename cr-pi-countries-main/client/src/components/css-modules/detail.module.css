@@ -4,7 +4,6 @@
   justify-content: center;
   min-height: calc(-145px + 100vh);
 }
-
 .detailContainer {
   margin-top: 5px;
   margin-bottom: 5px;
@@ -19,7 +18,18 @@
   flex-direction: column;
   border: #333 solid 3px;
   border-radius: 30px;
-  background-color: #333d;
+  background-color: rgba(48, 194, 217, 0.718);
+  transition: all 0.5s ease; /* Agregado para suavizar la transición del efecto hover */
+}
+
+.detailContainer:hover {
+  transform: scale(1.05); /* Aumenta el tamaño del contenedor */
+  background-color: rgba(
+    0,
+    248,
+    62,
+    0.405
+  ); /* Cambia el color de fondo al pasar el cursor */
 }
 
 .detailContainer h5 {
@@ -27,7 +37,7 @@
 }
 
 .titleDetail {
-  background-color: #333;
+  background-color: rgba(48, 194, 217, 0.071);
   color: #eee;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
@@ -46,6 +56,7 @@
 }
 
 .image {
+  border-radius: 30px;
   margin-right: 10px;
   margin-left: 10px;
   height: 130px;
@@ -53,7 +64,7 @@
 
 .contentDetail {
   border-bottom: #ddd;
-  color: #eee;
+  color: #000000;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -61,6 +72,8 @@
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   font-style: oblique;
+  font-size: large;
+  font-weight: bolder;
 }
 
 .contentDetail div {
