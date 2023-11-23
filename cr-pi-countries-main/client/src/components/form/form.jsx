@@ -137,11 +137,11 @@ const Form = () => {
         <div className={styles.container}>
           {showAlert && <Alert onClose={cerrarAlertHandler} />}
           <div className={styles.titleContainer}>
-            <h2 className={styles.title}>Create Activity</h2>
+            <h2 className={styles.title}>Crear actividad</h2>
           </div>
           <form className={styles.form} onSubmit={handleCreate}>
             <div className={styles.itemList}>
-              <label className={styles.label}>Name</label>
+              <label className={styles.label}>Nombre</label>
               <div className={styles.item}>
                 <input
                   className={styles.name}
@@ -155,7 +155,7 @@ const Form = () => {
                 />
                 {error.name && <span className={styles.x}>❌</span>}
               </div>
-              <label className={styles.label}>Difficulty</label>
+              <label className={styles.label}>Dificultad</label>
               <div className={styles.item}>
                 <select
                   name="difficulty"
@@ -163,7 +163,7 @@ const Form = () => {
                   className={styles.input}
                   value={activity.difficulty}
                 >
-                  <option value="">--Select Difficulty--</option>
+                  <option value="">--Selecione dificultad--</option>
                   <option value="1">⭐ ☆ ☆ ☆ ☆</option>
                   <option value="2">⭐⭐ ☆ ☆ ☆</option>
                   <option value="3">⭐⭐⭐ ☆ ☆</option>
@@ -172,7 +172,7 @@ const Form = () => {
                 </select>
                 {error.difficulty && <span className={styles.x}>❌</span>}
               </div>
-              <label className={styles.label}>Duration</label>
+              <label className={styles.label}>Duracion</label>
               <div className={styles.item}>
                 <input
                   type="number"
@@ -187,7 +187,7 @@ const Form = () => {
                 />
                 {error.duration && <span className={styles.x}>❌</span>}
               </div>
-              <label className={styles.label}>Season</label>
+              <label className={styles.label}>Estacion</label>
               <div className={styles.item}>
                 <select
                   name="season"
@@ -195,15 +195,15 @@ const Form = () => {
                   className={styles.input}
                   value={activity.season}
                 >
-                  <option value="">--Select Season--</option>
-                  <option value="Summer">Summer</option>
-                  <option value="Autumn">Autumn</option>
-                  <option value="Winter">Winter</option>
-                  <option value="Spring">Spring</option>
+                  <option value="">--Seleccione estacion-</option>
+                  <option value="Summer">Verano</option>
+                  <option value="Autumn">Otoño</option>
+                  <option value="Winter">Invierno</option>
+                  <option value="Spring">Primavera</option>
                 </select>
                 {error.season && <span className={styles.x}>❌</span>}
               </div>
-              <label className={styles.label}>Countries</label>
+              <label className={styles.label}>Paises</label>
               <div className={styles.item}>
                 <select
                   name="country"
@@ -211,7 +211,7 @@ const Form = () => {
                   className={styles.input}
                   value={countryMenu}
                 >
-                  <option value="countries">--Select Countries--</option>
+                  <option value="countries">--Seleccione paises--</option>
                   {countries?.map((country, index) => (
                     <option
                       key={index}

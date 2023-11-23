@@ -4,7 +4,7 @@ import { memo } from "react";
 const Footer = () => {
   return (
     <footer>
-      <div className={styles.container}>CREATED BY RUBIÑO PABLO</div>
+      <div className={styles.container}>CREADO POR RUBIÑO PABLO</div>
     </footer>
   );
 };

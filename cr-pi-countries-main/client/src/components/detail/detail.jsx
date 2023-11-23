@@ -56,17 +56,17 @@ const Detail = () => {
           </div>
           <div className={styles.contentDetail}>
             <div>
-              <h4>Continent: {country.continent}</h4>
+              <h4>Continente: {country.continent}</h4>
               {country.capital && (
                 <h4>Capital: {country.capital.join(" - ")}</h4>
               )}
             </div>
             {country.subregion && <h5>Subregion: {country.subregion}</h5>}
             {country.area && <h5>Area: {country.area}</h5>}
-            <h5>Population: {country.population} p</h5>
+            <h5>Poblacion: {country.population} p</h5>
             {country.activities.length > 0 && (
               <h5>
-                Activities:{" "}
+                Actividades:{" "}
                 {country.activities
                   .map((activity) => activity.name)
                   .join(" - ")}

@@ -145,11 +145,11 @@ const Nav = () => {
   return location !== "/" ? (
     <>
       <header className={styles.headerContainer}>
-        <h1>WORLD COUNTRIES</h1>
+        <h1>PAISES DEL MUNDO</h1>
         <nav className={styles.navBar}>
           {location !== "/home" && (
             <span onClick={handleGoToHome} className={styles.goToHome}>
-              Home
+              Inicio
             </span>
           )}
           {location === "/home" && !errors.stateError ? (
@@ -158,7 +158,7 @@ const Nav = () => {
                 onClick={handleGoToActivities}
                 className={styles.goToActivities}
               >
-                Activities
+                Actividades
               </span>
               <input
                 type="text"
@@ -167,10 +167,10 @@ const Nav = () => {
                 value={valueInput}
               />
               <button onClick={handleSerch} className={styles.findCountry}>
-                Search
+                Buscar
               </button>
               <span onClick={handleGoToLanding} className={styles.goToLanding}>
-                EXIT
+                SALIR
               </span>
             </>
           ) : null}
@@ -180,17 +180,17 @@ const Nav = () => {
         <div className={styles.menuContainer}>
           <aside className={styles.menuOrder}>
             <div className={styles.menuTitle}>
-              <h2>Order</h2>
+              <h2>Orden</h2>
             </div>
             <div>
-              <button onClick={handleOrderALf}>Alphabetical</button>
+              <button onClick={handleOrderALf}>Alfabetico</button>
             </div>
             <div>
-              <button onClick={handleOrderPop}>Population</button>
+              <button onClick={handleOrderPop}>Poblacion</button>
             </div>
             <div className={styles.criterioConainer}>
               <div>
-                <label htmlFor={"Ascendente"}>Ascending</label>
+                <label htmlFor={"Ascendente"}>Ascendiente</label>
                 <input
                   checked={cheked}
                   type="radio"
@@ -201,7 +201,7 @@ const Nav = () => {
                 />
               </div>
               <div>
-                <label htmlFor={"Descendente"}>Descending</label>
+                <label htmlFor={"Descendente"}>Descendiente</label>
                 <input
                   type="radio"
                   name="criterio"
@@ -215,7 +215,7 @@ const Nav = () => {
 
           <aside className={styles.menuFilter}>
             <div className={styles.menuTitle}>
-              <h2>Filter</h2>
+              <h2>Filtros</h2>
             </div>
             <select
               name="selectContinent"
@@ -224,7 +224,7 @@ const Nav = () => {
               value={valorSelect.selectContinent}
             >
               <option value="" disabled>
-                Filter by Continent
+                Filtro por continente
               </option>
               {continents?.map((continent, index) => (
                 <option key={index} value={continent}>
@@ -239,7 +239,7 @@ const Nav = () => {
               value={valorSelect.selectActivity}
             >
               <option value="" disabled>
-                Filter by Activities
+                Filtro por actividades
               </option>
               {activitiesMenu?.map((activity, index) => (
                 <option key={index} value={activity}>
@@ -247,7 +247,7 @@ const Nav = () => {
                 </option>
               ))}
             </select>
-            <button onClick={handleresetFilter}>Clear Filters</button>
+            <button onClick={handleresetFilter}>Limpiar filtros</button>
           </aside>
         </div>
       ) : null}
