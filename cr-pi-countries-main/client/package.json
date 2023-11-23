@@ -8,9 +8,13 @@
     "build": "vite build",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "test": "jest"
+    "test": "react-scripts test",
+    "test:Card": "jest /src/tests/card.test.js--detectOpenHandles"
   },
   "dependencies": {
+    "@testing-library/jest-dom": "^6.1.4",
+    "@testing-library/react": "^14.1.2",
+    "@testing-library/user-event": "^14.5.1",
     "axios": "^1.4.0",
     "jest": "^29.7.0",
     "react": "^18.2.0",
