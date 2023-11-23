@@ -142,9 +142,11 @@ const Nav = () => {
       <header className={styles.headerContainer}>
         <h1>WORLD COUNTRIES</h1>
         <nav className={styles.navBar}>
-          <span onClick={handleGoToHome} className={styles.goToHome}>
-            Home
-          </span>
+          {location !== "/home" && (
+            <span onClick={handleGoToHome} className={styles.goToHome}>
+              Home
+            </span>
+          )}
           {location === "/home" && !errors.stateError ? (
             <>
               <span
