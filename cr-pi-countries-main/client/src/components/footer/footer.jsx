@@ -1,4 +1,4 @@
-import styles from "./footer.module.css";
+import styles from "../css-modules/footer.module.css";
 import { memo } from "react";
 
 const Footer = () => {

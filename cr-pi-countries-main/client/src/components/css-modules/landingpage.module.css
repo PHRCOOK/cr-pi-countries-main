@@ -1,0 +1,61 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  min-height: calc(100vh - 42px);
+}
+
+.imageContainer {
+  position: relative;
+  margin: auto;
+  height: 480px;
+}
+
+.img2 {
+  position: absolute;
+  top: 95px;
+  left: -140px;
+  z-index: 1;
+  max-height: 300px;
+  animation: rotate 4s ease-in-out;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-45deg);
+  }
+  50% {
+    transform: rotate(25deg);
+  }
+  75% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.img1 {
+  max-height: 400px;
+  position: absolute;
+  top: 50px;
+  left: -150px;
+  z-index: 2;
+}
+
+.buttonInicio {
+  color: #fff;
+  background-color: #333;
+  border: 10px;
+  border-radius: 3px;
+  border-color: dimgray;
+  padding: 10px;
+  width: 8rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
