@@ -44,7 +44,7 @@ const Detail = () => {
       {country.id ? (
         <div className={styles.detailContainer}>
           <div className={styles.titleDetail}>
-            <h2>CCA3: {country.id}</h2>
+            <h2>Siglas: {country.id}</h2>
           </div>
           <div className={styles.bannerFlag}>
             <h2>{country.name}</h2>
