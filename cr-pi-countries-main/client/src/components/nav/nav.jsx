@@ -140,7 +140,7 @@ const Nav = () => {
   return location !== "/" ? (
     <>
       <header className={styles.headerContainer}>
-        <h1>World Countries</h1>
+        <h1>WORLD COUNTRIES</h1>
         <nav className={styles.navBar}>
           <span onClick={handleGoToHome} className={styles.goToHome}>
             Home
