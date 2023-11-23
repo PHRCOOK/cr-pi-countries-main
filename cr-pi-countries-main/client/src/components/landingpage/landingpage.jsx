@@ -1,6 +1,5 @@
-import styles from "../css-modules/Landingpage.module.css";
-import mundo from "../../assets/logo1_mapapapa_mod.png";
-import letrero from "../../assets/logo2_mapapapa_mod.png";
+import styles from "../css-modules/landingpage.module.css";
+import mundo from "../../assets/mundogirando.gif";
 import { useNavigate } from "react-router-dom";
 
 const LandingPage = () => {
@@ -13,11 +12,6 @@ const LandingPage = () => {
   return (
     <div className={styles.container}>
       <div className={styles.imageContainer}>
-        <img
-          className={styles.img1}
-          src={letrero}
-          alt="bienvedidos aventureros"
-        />
         <img className={styles.img2} src={mundo} alt="imagen del mundo" />
       </div>
       <div>
