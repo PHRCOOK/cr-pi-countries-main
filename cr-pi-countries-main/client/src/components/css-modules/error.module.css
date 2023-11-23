@@ -1,54 +1,54 @@
-.errorContainer{
-    display: flex;
-    min-height: calc(-145px + 100vh);
+.errorContainer {
+  display: flex;
+  min-height: calc(-145px + 100vh);
 }
 
-.cardError{
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 7%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-width: 350px;
-    width: 50%;
-    height: 300px;
-    align-items: center;
-    background-color: #333d;
-    border: #333 solid 3px;
-    border-radius: 30px;
-    color: #eee;
-    text-shadow:2px 0 0 #333, -2px 0 0 #333, 0 2px 0 #333, 0 -2px 0 #333, 1px 1px #333, -1px -1px 0 #333, 1px -1px 0 #333, -1px 1px 0 #333;
-
+.cardError {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 7%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 450px;
+  width: 50%;
+  height: 400px;
+  align-items: center;
+  background-color: #333d;
+  border: #333 solid 3px;
+  border-radius: 30px;
+  color: #eee;
+  text-shadow: 2px 0 0 #333, -2px 0 0 #333, 0 2px 0 #333, 0 -2px 0 #333,
+    1px 1px #333, -1px -1px 0 #333, 1px -1px 0 #333, -1px 1px 0 #333;
 }
 
-.cardError h1{
-    font-size: 3rem;
+.cardError h1 {
+  font-size: 3rem;
 }
 
-.closeError{
-    text-decoration: none;
-    color: #fff;
-    font-weight: 400;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    border: #dee2e6 solid 3px;
-    padding: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    cursor: pointer;
-    outline-offset: 4px;
-    transition: filter 250ms;
-    user-select: none;
-    touch-action: manipulation;
+.closeError {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 400;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: #dee2e6 solid 3px;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  cursor: pointer;
+  outline-offset: 4px;
+  transition: filter 250ms;
+  user-select: none;
+  touch-action: manipulation;
 }
 
 .closeError:hover {
-    background-color: #444;
-    filter: brightness(110%);
+  background-color: #444;
+  filter: brightness(110%);
 }
 
 .closeError:active {
-    background-color: #444;
-    filter: brightness(90%);
+  background-color: #444;
+  filter: brightness(90%);
 }

@@ -192,6 +192,31 @@ label {
   filter: brightness(90%);
 }
 
+.goToLanding {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 400;
+  margin-left: 200px;
+  border-radius: 5px;
+  border: #dee2e6 solid 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+  cursor: pointer;
+  outline-offset: 4px;
+  transition: filter 250ms;
+  user-select: none;
+  touch-action: manipulation;
+}
+
+.goToLanding:hover {
+  background-color: #444;
+  filter: brightness(110%);
+}
+
+.goToLanding:active {
+  background-color: #444;
+  filter: brightness(90%);
+}
 .findCountry {
   background-color: #333;
   color: #fff;

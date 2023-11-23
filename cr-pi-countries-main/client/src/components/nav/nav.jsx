@@ -109,6 +109,11 @@ const Nav = () => {
     });
   };
 
+  const handleGoToLanding = () => {
+    dispatch(resetError());
+    navigate("/");
+  };
+
   const handleGoToActivities = () => {
     dispatch(resetError());
     navigate("/activities");
@@ -164,6 +169,9 @@ const Nav = () => {
               <button onClick={handleSerch} className={styles.findCountry}>
                 Search
               </button>
+              <span onClick={handleGoToLanding} className={styles.goToLanding}>
+                EXIT
+              </span>
             </>
           ) : null}
         </nav>
