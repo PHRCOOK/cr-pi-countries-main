@@ -9,6 +9,7 @@
   position: relative;
   margin: auto;
   height: 480px;
+  margin-bottom: 100px;
 }
 
 .img2 {
@@ -36,14 +37,6 @@
   100% {
     transform: rotate(0deg);
   }
-}
-
-.img1 {
-  max-height: 400px;
-  position: absolute;
-  top: 50px;
-  left: -150px;
-  z-index: 2;
 }
 
 .buttonInicio {
