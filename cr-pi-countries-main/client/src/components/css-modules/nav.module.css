@@ -4,9 +4,9 @@
   text-align: center;
   justify-content: center;
   align-items: center;
-  background-color: #24d4d451;
   color: #6aeeff;
-  margin-top: -20px;
+  margin-top: -40px;
+  margin-bottom: 10px;
   padding: 2px;
   padding-right: 15px;
   padding-left: 15px;
@@ -23,6 +23,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 3px;
+  margin-top: 10px;
 }
 
 .menuContainer {
@@ -33,7 +34,7 @@
 
 .menuOrder {
   margin-bottom: 20px;
-  margin-top: 10px;
+  margin-top: 15px;
   border: #333 solid 3px;
   background-color: #333b;
   border-radius: 10px;
