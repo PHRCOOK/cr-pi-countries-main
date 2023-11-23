@@ -47,7 +47,8 @@ const Form = () => {
     if (
       activity.name === "" ||
       activity.name.trim().length < 3 ||
-      activity.name.length > 255
+      activity.name.length > 255 ||
+      !isNaN(activity.name)
     )
       inputErrors.name = true;
 
