@@ -15,7 +15,7 @@
   touch-action: manipulation;
   color: #eee;
   background-color: #333d;
-  box-shadow: 0px 4px 20px 0px rgb(255, 254, 254);
+  box-shadow: 0px 4px 20px 0px rgb(0, 0, 0);
 }
 
 .cardContainer:hover {
@@ -23,6 +23,7 @@
   color: #fff;
   background-color: #222e;
   filter: brightness(110%);
+  box-shadow: 0px 4px 20px 0px rgb(255, 254, 254);
 }
 
 .image {
