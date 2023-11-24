@@ -15,8 +15,8 @@ const Card = ({ id, image, name, continent }) => {
       onClick={handleSelect}
       className={styles.cardContainer}
     >
-      <img className={styles.image} src={image} alt="bandera del pais" />
       <h3 className={styles.name}>{name}</h3>
+      <img className={styles.image} src={image} alt="bandera del pais" />
       <h4 className={styles.continent}>{continent}</h4>
     </div>
   ) : null;

@@ -26,9 +26,9 @@
 }
 
 .image {
-  border-top-left-radius: calc(-3px + 20px);
-  border-top-right-radius: calc(-3px + 20px);
+  border-radius: 180px;
   height: 80px;
+  margin-bottom: 50px;
   object-fit: cover;
 }
 
