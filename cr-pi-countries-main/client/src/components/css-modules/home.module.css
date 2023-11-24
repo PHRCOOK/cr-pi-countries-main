@@ -19,12 +19,65 @@
   border-radius: 5px;
   background-color: #333b;
   border: #333 solid 3px;
+  width: 1000px;
 }
 
 .btnPage {
   background-color: #aaa0;
   border: #3330 solid 3px;
   width: 30px;
+  color: #eee;
+  font-size: smaller;
+}
+
+.btnPage:hover {
+  background-color: #222e;
+  border: #333 outset 3px;
+  border-radius: 10px;
+}
+
+.btnPage:active {
+  background-color: #777;
+  border: #aaa inset 3px;
+  border-radius: 3px;
+}
+
+.btnPageSelected {
+  background-color: #333;
+  color: #eee;
+  border: #aaa solid 3px;
+  border-radius: 10px;
+}
+.btnPage1 {
+  background-color: #aaa0;
+  border: #3330 solid 3px;
+  width: 100px;
+  color: #eee;
+  font-size: smaller;
+}
+
+.btnPage:hover {
+  background-color: #222e;
+  border: #333 outset 3px;
+  border-radius: 10px;
+}
+
+.btnPage:active {
+  background-color: #777;
+  border: #aaa inset 3px;
+  border-radius: 3px;
+}
+
+.btnPageSelected {
+  background-color: #333;
+  color: #eee;
+  border: #aaa solid 3px;
+  border-radius: 10px;
+}
+.btnPage2 {
+  background-color: #aaa0;
+  border: #3330 solid 3px;
+  width: 100px;
   color: #eee;
   font-size: smaller;
 }

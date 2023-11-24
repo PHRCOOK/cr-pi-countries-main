@@ -39,6 +39,22 @@ const Home = () => {
     dispatch(setPage(Number(value)));
   };
 
+  const nextPage = () => {
+    if (pageSelect < totalPages) {
+      dispatch(setPage(pageSelect + 1));
+    } else {
+      dispatch(setPage(1)); // Si estás en la última página, vuelve a la primera
+    }
+  };
+
+  const prevPage = () => {
+    if (pageSelect > 1) {
+      dispatch(setPage(pageSelect - 1));
+    } else {
+      dispatch(setPage(totalPages)); // Si estás en la primera página, ve a la última
+    }
+  };
+
   useEffect(() => {
     stateError && error.response
       ? setLocalError({
@@ -65,19 +81,20 @@ const Home = () => {
   return (
     <>
       {stateError ? (
-        <>
-          <Error
-            status={localError?.status}
-            message={localError?.message}
-            description={localError?.decription}
-            reset={localError?.reset}
-          />
-        </>
+        <Error
+          status={localError?.status}
+          message={localError?.message}
+          description={localError?.decription}
+          reset={localError?.reset}
+        />
       ) : (
         <section className={styles.principalContainer}>
           {sortedCountries && <Page countriesSelect={pageCountries} />}
           {totalPages ? (
             <div className={styles.pageSelector}>
+              <button className={styles.btnPage1} onClick={prevPage}>
+                Anterior
+              </button>
               {range(1, totalPages).map((elem, index) => (
                 <button
                   className={styles.btnPage}
@@ -97,6 +114,9 @@ const Home = () => {
                   {elem}
                 </button>
               ))}
+              <button className={styles.btnPage2} onClick={nextPage}>
+                Siguiente
+              </button>
             </div>
           ) : null}
         </section>
