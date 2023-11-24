@@ -1,7 +1,7 @@
-const { DataTypes, Sequelize } = require("sequelize");
+const { DataTypes } = require("sequelize");
 
-module.exports = (Sequelize) => {
-  Sequelize.define(
+module.exports = (sequelize) => {
+  const Activity = sequelize.define(
     "activity",
     {
       id: {
@@ -31,4 +31,6 @@ module.exports = (Sequelize) => {
     },
     { timestamps: false }
   );
+
+  return Activity;
 };

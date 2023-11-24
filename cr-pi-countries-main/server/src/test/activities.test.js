@@ -12,7 +12,9 @@ describe("Activities Router", () => {
       .post("/activities")
       .send({ name: "Test Activity" });
 
+    // Si esperas un código de estado 500 cuando algo va mal, cambia tu expectativa aquí
     expect(res.statusCode).toEqual(500);
+    // También puedes esperar un mensaje de error específico
     expect(res.body).toHaveProperty("error");
   });
 
