@@ -9,8 +9,7 @@
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "test": "react-scripts test",
-    "test:Card": "jest /src/tests/card.test.js--detectOpenHandles",
-    "start": "serve dist"
+    "test:Card": "jest /src/tests/card.test.js--detectOpenHandles"
   },
   "dependencies": {
     "@testing-library/jest-dom": "^6.1.4",
@@ -25,9 +24,7 @@
     "react-router-dom": "^6.11.1",
     "redux": "^4.2.1",
     "redux-thunk": "^2.4.2",
-    "serve": "^14.2.1",
     "supertest": "^6.3.3",
-    "vercel": "^32.5.6",
     "web-vitals": "^3.5.0"
   },
   "devDependencies": {
