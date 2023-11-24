@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "test": "react-scripts test",
     "test:Card": "jest /src/tests/card.test.js--detectOpenHandles",
-    "start": "serve dist -s -n -l  $PORT"
+    "start": "serve dist"
   },
   "dependencies": {
     "@testing-library/jest-dom": "^6.1.4",
