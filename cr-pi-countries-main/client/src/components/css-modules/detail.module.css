@@ -7,12 +7,12 @@
 .detailContainer {
   margin-top: 5px;
   margin-bottom: 5px;
-  margin-left: auto;
+  margin-left: -50px;
   margin-right: auto;
   display: flex;
   min-width: 300px;
-  width: 80%;
-  max-width: 900px;
+  width: 115%;
+  max-width: 1000px;
   height: fit-content;
   padding-bottom: 20px;
   flex-direction: column;
@@ -20,7 +20,7 @@
   border-radius: 30px;
   background-color: rgba(48, 194, 217, 0.718);
   transition: all 0.5s ease; /* Agregado para suavizar la transición del efecto hover */
-  box-shadow: 0px 4px 30px 0px rgb(255, 254, 254);
+  box-shadow: 0px 4px 30px 0px rgb(0, 0, 0);
 }
 
 .detailContainer:hover {
@@ -31,6 +31,7 @@
     62,
     0.405
   ); /* Cambia el color de fondo al pasar el cursor */
+  box-shadow: 0px 4px 30px 0px rgb(255, 255, 255);
 }
 
 .detailContainer h5 {
