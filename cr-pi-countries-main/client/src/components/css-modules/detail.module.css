@@ -7,11 +7,11 @@
 .detailContainer {
   margin-top: 5px;
   margin-bottom: 5px;
-  margin-left: -50px;
+  margin-left: -15px;
   margin-right: auto;
   display: flex;
   min-width: 300px;
-  width: 115%;
+  width: 105%;
   max-width: 1000px;
   height: fit-content;
   padding-bottom: 20px;
