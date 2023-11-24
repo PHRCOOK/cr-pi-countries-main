@@ -13,7 +13,7 @@ const LandingPage = () => {
     <div className={styles.container}>
       <div>
         <button className={styles.buttonInicio} onClick={goToHome}>
-          INICIA TU AVENTURA
+          INICIA TU VIAJE
         </button>
       </div>
       <div className={styles.imageContainer}>
