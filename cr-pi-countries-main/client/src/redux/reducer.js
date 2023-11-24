@@ -13,7 +13,7 @@ import {
   FILTER_ACTIVITIES,
   FILTER_CONTINENT,
   RESET_FILTER,
-} from "./actions.js";
+} from "./actions";
 
 const initialState = {
   countries: [],
