@@ -163,7 +163,7 @@ const Nav = () => {
               <input
                 type="text"
                 onChange={handleInputSerch}
-                placeholder="País ?"
+                placeholder="Buscar pais por nombre"
                 value={valueInput}
               />
               <button onClick={handleSerch} className={styles.findCountry}>
