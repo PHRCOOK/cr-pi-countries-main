@@ -28,6 +28,7 @@
   width: 30px;
   color: #eee;
   font-size: smaller;
+  gap: 5%;
 }
 
 .btnPage:hover {
@@ -99,4 +100,38 @@
   color: #eee;
   border: #aaa solid 3px;
   border-radius: 10px;
+}
+
+/* Media queries */
+
+@media (max-width: 1480px) {
+  .principalContainer {
+    margin-left: 0;
+  }
+
+  .pageSelector {
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  .btnPage1,
+  .btnPage2 {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .principalContainer {
+    margin-left: 0;
+  }
+
+  .pageSelector {
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  .btnPage1,
+  .btnPage2 {
+    width: 50%;
+  }
 }
