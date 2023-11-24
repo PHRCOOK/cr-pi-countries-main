@@ -9,12 +9,14 @@ describe("Test /countries routes", () => {
   test("GET /countries", async () => {
     const response = await request(app).get("/countries");
     expect(response.statusCode).toBe(200);
-    // Aquí puedes añadir más expectativas sobre la respuesta
+    expect(response.body).toBeInstanceOf(Array);
   });
 
   test("GET /countries/:idPais", async () => {
     const response = await request(app).get("/countries/ARG");
     expect(response.statusCode).toBe(200);
-    // Aquí puedes añadir más expectativas sobre la respuesta
+    expect(response.body).toHaveProperty("name");
+    expect(response.body).toHaveProperty("population");
+    expect(response.body).toHaveProperty("area");
   });
 });
