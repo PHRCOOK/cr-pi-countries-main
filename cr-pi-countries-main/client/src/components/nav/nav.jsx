@@ -45,14 +45,24 @@ const Nav = () => {
     ...new Set([...activities.map((activity) => activity.name)]),
   ];
 
-  //hace un dispath para aplicar el orden alfabetico ASC/DESC segun criterio
-  const handleOrderALf = () => {
-    dispatch(orderCountryAlf(criterio.criterio));
+  //hace un dispath para aplicar el orden alfabetico ascendente
+  const handleOrderAlfAsc = () => {
+    dispatch(orderCountryAlf("ASC"));
   };
 
-  //hace un dispath para aplicar el orden por poblacion ASC/DESC segun criterio
-  const handleOrderPop = () => {
-    dispatch(orderCountryPop(criterio.criterio));
+  //hace un dispath para aplicar el orden alfabetico descendente
+  const handleOrderAlfDesc = () => {
+    dispatch(orderCountryAlf("DES"));
+  };
+
+  //hace un dispath para aplicar el orden por poblacion ascendente
+  const handleOrderPopAsc = () => {
+    dispatch(orderCountryPop("ASC"));
+  };
+
+  //hace un dispath para aplicar el orden por poblacion descendente
+  const handleOrderPopDesc = () => {
+    dispatch(orderCountryPop("DES"));
   };
 
   //hace un dispath para reestablecer los filtros y aplicar el filtrado por continentes
@@ -178,40 +188,22 @@ const Nav = () => {
       </header>
       {location === "/home" && !errors.stateError ? (
         <div className={styles.menuContainer}>
-          <aside className={styles.menuOrder}>
-            <div className={styles.menuTitle}>
-              <h2>Orden</h2>
-            </div>
-            <div>
-              <button onClick={handleOrderALf}>Alfabetico</button>
-            </div>
-            <div>
-              <button onClick={handleOrderPop}>Poblacion</button>
-            </div>
-            <div className={styles.criterioConainer}>
-              <div>
-                <label htmlFor={"Ascendente"}>Ascendiente</label>
-                <input
-                  checked={cheked}
-                  type="radio"
-                  name="criterio"
-                  id="Ascendente"
-                  onChange={handleselectCriterio}
-                  value="ASC"
-                />
-              </div>
-              <div>
-                <label htmlFor={"Descendente"}>Descendiente</label>
-                <input
-                  type="radio"
-                  name="criterio"
-                  id="Descendente"
-                  onChange={handleselectCriterio}
-                  value="DES"
-                />
-              </div>
-            </div>
-          </aside>
+          <div>
+            <button className={styles.menuOrder1} onClick={handleOrderAlfAsc}>
+              Alfabetico Ascendente
+            </button>
+            <button className={styles.menuOrder1} onClick={handleOrderAlfDesc}>
+              Alfabetico Descendente
+            </button>
+          </div>
+          <div>
+            <button className={styles.menuOrder1} onClick={handleOrderPopAsc}>
+              Poblacion Ascendente
+            </button>
+            <button className={styles.menuOrder1} onClick={handleOrderPopDesc}>
+              Poblacion Descendente
+            </button>
+          </div>
 
           <aside className={styles.menuFilter}>
             <div className={styles.menuTitle}>
