@@ -111,14 +111,6 @@ const Nav = () => {
     setValueInput("");
   };
 
-  const handleselectCriterio = (event) => {
-    const { name, value } = event.target;
-    value === "ASC" ? setCheked(true) : setCheked(false);
-    setCriterio({
-      [name]: value,
-    });
-  };
-
   const handleGoToLanding = () => {
     dispatch(resetError());
     navigate("/");
@@ -143,6 +135,10 @@ const Nav = () => {
     navigate("/home");
   };
 
+  // Funciones para manejar el ordenamiento, filtrado, búsqueda y navegación
+  // Cada función realiza un despacho para actualizar el estado de Redux
+  // Las funciones de manejo de eventos se definen aquí...
+
   useEffect(() => {
     if (!errors.stateError) {
       dispatch(getContinents());
@@ -153,6 +149,9 @@ const Nav = () => {
   }, [countries, criterio, errors]);
 
   return location !== "/" ? (
+    // Renderiza la barra de navegación y la barra lateral
+    // El contenido se renderiza en función de la ubicación y el estado de error
+    // El código de renderización se define aquí...
     <>
       <header className={styles.headerContainer}>
         <h1>PAISES DEL MUNDO</h1>

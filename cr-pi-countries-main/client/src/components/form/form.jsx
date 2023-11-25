@@ -8,10 +8,12 @@ import Alert from "../alert/alert";
 import { BASE_API_URL, PORT } from "../../apiData";
 
 const Form = () => {
+  // Usamos los hooks de Redux para obtener el estado y despachar acciones
   const { countries, errors } = useSelector((state) => state);
   const { stateError } = errors;
   const dispatch = useDispatch();
 
+  // Definimos el estado local del componente
   const [countryMenu, setCountryMenu] = useState("");
   const [activity, setActivity] = useState({
     name: "",
@@ -19,7 +21,7 @@ const Form = () => {
     duration: "",
     season: "",
   });
-
+  // Definimos las funciones para manejar los eventos del formulario
   const [countriesSelect, setCountriesSelect] = useState([]);
 
   const [showAlert, setShowAlert] = useState(false);
@@ -32,6 +34,7 @@ const Form = () => {
     setShowAlert(false);
   };
 
+  // Esta función se utiliza para limpiar el formulario, restableciendo todos los campos a sus valores iniciales
   const clearForm = () => {
     setActivity({
       name: "",
@@ -42,8 +45,12 @@ const Form = () => {
     setCountriesSelect([]);
   };
 
+  // Esta función se utiliza para validar los datos del formulario antes de enviarlos
+  // Comprueba si cada campo cumple con ciertas condiciones y, si no, agrega una propiedad al objeto inputErrors con un valor de true
   const validateCreate = (activity, countriesSelect) => {
     const inputErrors = {};
+
+    // Comprueba si el nombre de la actividad está vacío, tiene menos de 3 caracteres, más de 255 caracteres o es un número
     if (
       activity.name === "" ||
       activity.name.trim().length < 3 ||
@@ -52,8 +59,10 @@ const Form = () => {
     )
       inputErrors.name = true;
 
+    // Comprueba si la dificultad de la actividad está vacía
     if (activity.difficulty === "") inputErrors.difficulty = true;
 
+    // Comprueba si la duración de la actividad está vacía, es menor que 1 o mayor que 100
     if (
       activity.duration === "" ||
       activity.duration < 1 ||
@@ -65,9 +74,12 @@ const Form = () => {
 
     if (!countriesSelect[0]) inputErrors.countries = true;
 
+    // Retorna el objeto inputErrors, que puede ser utilizado para mostrar mensajes de error en el formulario
     return inputErrors;
   };
 
+  // Esta función maneja el cambio en los campos de entrada del formulario
+  // Actualiza el estado de la actividad con los nuevos valores de los campos de entrada
   const handleInput = (event) => {
     const { name, value } = event.target;
     setActivity({
@@ -76,6 +88,8 @@ const Form = () => {
     });
   };
 
+  // Esta función maneja el cambio en el campo de selección del formulario
+  // Actualiza el estado del menú del país y de los países seleccionados con los nuevos valores
   const handleSelect = (event) => {
     const { value } = event.target;
     const [id, image, name] = value.split(",");
@@ -90,6 +104,8 @@ const Form = () => {
     }
   };
 
+  // Esta función maneja la creación de una nueva actividad
+  // Envía una petición POST a la API con los datos de la nueva actividad y los países seleccionados
   const handleCreate = async (event) => {
     event.preventDefault();
     console.log(activity, countriesSelect);
@@ -106,6 +122,8 @@ const Form = () => {
     }
   };
 
+  // Esta función maneja la eliminación de un país seleccionado
+  // Actualiza el estado de los países seleccionados eliminando el país seleccionado
   const handleDelete = (event) => {
     const { value } = event.target;
     const [id] = value.split(",");
@@ -115,10 +133,12 @@ const Form = () => {
     );
   };
 
+  // Usamos useEffect para obtener todos los países cuando se monta el componente
   useEffect(() => {
     dispatch(getAllCountries());
   }, [dispatch]);
 
+  // Validamos los datos del formulario antes de enviarlo
   const error = validateCreate(activity, countriesSelect);
 
   return (

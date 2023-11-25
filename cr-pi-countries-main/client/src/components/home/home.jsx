@@ -9,9 +9,13 @@ import { useEffect, useState } from "react";
 const Home = () => {
   const dispatch = useDispatch();
 
+  // Obteniendo los países ordenados del estado de Redux
   const { sortedCountries } = useSelector((state) => state);
+  // Obteniendo los errores del estado de Redux
   const { errors } = useSelector((state) => state);
   const { stateError, error } = errors;
+
+  // Estado local para manejar errores
 
   const [localError, setLocalError] = useState({
     status: "",
@@ -20,8 +24,13 @@ const Home = () => {
     reset: false,
   });
 
+  // Obteniendo la paginación del estado de Redux
+
   const { pagination } = useSelector((state) => state);
   const { pageCountries, totalPages, pageSelect } = pagination;
+
+  // Función para generar un rango de números
+  // Se utiliza para generar las páginas disponibles para la paginación
 
   const range = (from, to, step = 1) => {
     let i = from;
@@ -34,10 +43,16 @@ const Home = () => {
     return range;
   };
 
+  // Manejador de eventos para cambiar la página
+  // Se dispara cuando el usuario selecciona una página diferente en la paginación
+
   const handlePage = (event) => {
     const { value } = event.target;
     dispatch(setPage(Number(value)));
   };
+
+  // Función para ir a la siguiente página
+  // Se dispara cuando el usuario hace clic en el botón "Siguiente"
 
   const nextPage = () => {
     if (pageSelect < totalPages) {
@@ -47,6 +62,9 @@ const Home = () => {
     }
   };
 
+  // Función para ir a la página anterior
+  // Se dispara cuando el usuario hace clic en el botón "Anterior"
+
   const prevPage = () => {
     if (pageSelect > 1) {
       dispatch(setPage(pageSelect - 1));
@@ -54,6 +72,9 @@ const Home = () => {
       dispatch(setPage(totalPages)); // Si estás en la primera página, ve a la última
     }
   };
+
+  // Efecto para manejar los errores
+  // Se ejecuta cuando hay un cambio en el estado de error
 
   useEffect(() => {
     stateError && error.response

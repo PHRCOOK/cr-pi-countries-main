@@ -6,11 +6,12 @@ import { memo, useEffect, useState } from "react";
 import { BASE_API_URL, PORT } from "../../apiData";
 
 const Detail = () => {
+  // Obtenemos el id del país desde los parámetros de la ruta
   const { id } = useParams();
-
+  // Definimos el estado para el país y el error
   const [country, setCountry] = useState({});
   const [error, setError] = useState({});
-
+  // Definimos una función asíncrona para obtener los datos del país
   const getCountry = async () => {
     try {
       const endpoint = `${BASE_API_URL}:${PORT}/countries/${id}`;
@@ -33,7 +34,7 @@ const Detail = () => {
           });
     }
   };
-
+  // Usamos el hook useEffect para llamar a getCountry cuando el componente se monta
   useEffect(() => {
     getCountry();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -42,6 +43,7 @@ const Detail = () => {
   return (
     <div className={styles.principalContainer}>
       {country.id ? (
+        // Si tenemos los datos del país, los mostramos
         <div className={styles.detailContainer}>
           <div className={styles.titleDetail}>
             <h2>Siglas: {country.id}</h2>
@@ -75,6 +77,7 @@ const Detail = () => {
           </div>
         </div>
       ) : (
+        // Si no tenemos los datos del país, mostramos el error
         <>
           {error.status && (
             <Error
