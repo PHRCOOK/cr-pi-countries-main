@@ -17,20 +17,17 @@
   padding-bottom: 20px;
   flex-direction: column;
   border: #333 solid 3px;
-  border-radius: 30px;
-  background-color: rgba(48, 194, 217, 0.718);
+  border-radius: 10px;
+  background-image: url("C:\Users\USUARIO\Desktop\cr-pi-countries-main\cr-pi-countries-main\client\src\assets\image1170x530cropped.jpg");
+  background-size: cover;
   transition: all 0.5s ease; /* Agregado para suavizar la transición del efecto hover */
   box-shadow: 0px 4px 30px 0px rgb(0, 0, 0);
 }
 
 .detailContainer:hover {
   transform: scale(1.05); /* Aumenta el tamaño del contenedor */
-  background-color: rgba(
-    0,
-    248,
-    62,
-    0.405
-  ); /* Cambia el color de fondo al pasar el cursor */
+  background-image: url("C:\Users\USUARIO\Desktop\cr-pi-countries-main\cr-pi-countries-main\client\src\assets\WAU3AN6RQNFXDKECYXO3L57RJA.avif");
+
   box-shadow: 0px 4px 30px 0px rgb(255, 255, 255);
 }
 
@@ -40,7 +37,7 @@
 
 .titleDetail {
   background-color: rgba(48, 194, 217, 0.071);
-  color: #eee;
+  color: #ffffff;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
 }
@@ -52,13 +49,13 @@
 
 .bannerFlag h2 {
   font-size: 2rem;
-  color: #eee;
+  color: #ffffff;
   margin-left: auto;
   margin-right: auto;
 }
 
 .image {
-  border-radius: 180px;
+  border-radius: 20px;
   margin-right: 10px;
   margin-left: 10px;
   height: 130px;
@@ -71,7 +68,8 @@
 
 .contentDetail {
   border-bottom: #ddd;
-  color: #000000;
+  color: hsl(0, 0%, 100%);
+  font-size: larger;
   display: flex;
   flex-direction: column;
   align-items: flex-start;

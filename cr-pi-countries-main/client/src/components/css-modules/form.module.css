@@ -17,7 +17,8 @@
   margin-right: auto;
   border: #333 solid 3px;
   border-radius: 30px;
-  background-color: rgba(0, 242, 255, 0.155);
+  background-image: url("C:\Users\USUARIO\Desktop\cr-pi-countries-main\cr-pi-countries-main\client\src\assets\banderas.jpg");
+  background-size: cover;
   box-shadow: 0px 4px 40px 0px rgb(2, 2, 2);
   transition: all 0.5s ease;
 }
@@ -25,11 +26,12 @@
 .container:hover {
   box-shadow: 0px 4px 40px 0px rgb(255, 255, 255);
   transform: scale(1.05);
-  background-color: rgba(0, 248, 62, 0.405);
+  background-image: url("C:\Users\USUARIO\Desktop\cr-pi-countries-main\cr-pi-countries-main\client\src\assets\Ciudades.jpg");
+  background-size: cover;
 }
 
 .titleContainer {
-  background-color: #00bdfc13;
+  background-color: #00000090;
   border: #333 solid 3px;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
@@ -58,8 +60,10 @@
 
 .label {
   align-self: start;
-  color: #eee;
+  color: #ffffff;
   font-size: 18px;
+  background-color: #0000008d;
+  border-radius: 4px;
 }
 
 .item {

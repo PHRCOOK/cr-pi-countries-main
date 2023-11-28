@@ -157,7 +157,7 @@ const Form = () => {
         <div className={styles.container}>
           {showAlert && <Alert onClose={cerrarAlertHandler} />}
           <div className={styles.titleContainer}>
-            <h2 className={styles.title}>Crear actividad</h2>
+            <h2 className={styles.title}>Crear Actividad Turistica</h2>
           </div>
           <form className={styles.form} onSubmit={handleCreate}>
             <div className={styles.itemList}>
@@ -279,7 +279,7 @@ const Form = () => {
                   className={styles.front}
                   hidden={Object.entries(error).length > 0}
                 >
-                  Create
+                  Crear actividad
                 </span>
               </button>
             </div>
