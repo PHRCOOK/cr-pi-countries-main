@@ -15,7 +15,7 @@ export const ERROR = "ERROR";
 export const RESET_ERROR = "RESET_ERROR";
 export const SET_PAGE = "SET_PAGE";
 
-//menojo de errores de las actions
+//menejo de errores de las actions
 export const handleError = (error) => ({
   type: ERROR,
   payload: error,

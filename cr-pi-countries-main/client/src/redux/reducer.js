@@ -92,7 +92,7 @@ export const reducer = (state = initialState, action) => {
         ),
       };
 
-    //establece todas las actividades en el estado gloval obtenidas desde servidos
+    //establece todas las actividades en el estado gloval obtenidas desde servidor
     case GET_ACTIVITIES:
       return {
         ...state,
