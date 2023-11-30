@@ -11,6 +11,6 @@ conn.sync({ alter: true, force: false }).then(() => {
   server.listen(process.env.PORT, async () => {
     //Cuando se levanta el servidor se ejecuta populateDB para poblar la base de datos
     await populateDb();
-    console.log("Servidor levantado en el puerto: 3001"); // eslint-disable-line no-console
+    console.log("Servidor levantado en el puerto:", process.env.PORT); // eslint-disable-line no-console
   });
 });
