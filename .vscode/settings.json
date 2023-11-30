@@ -9,5 +9,6 @@
       "database": "countries",
       "username": "postgres"
     }
-  ]
+  ],
+  "editor.inlineSuggest.showToolbar": "onHover"
 }
