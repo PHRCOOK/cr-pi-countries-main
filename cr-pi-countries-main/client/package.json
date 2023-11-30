@@ -26,6 +26,7 @@
     "redux": "^4.2.1",
     "redux-thunk": "^2.4.2",
     "supertest": "^6.3.3",
+    "vercel": "^32.5.6",
     "web-vitals": "^3.5.0"
   },
   "devDependencies": {
