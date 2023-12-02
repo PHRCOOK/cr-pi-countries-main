@@ -23,7 +23,7 @@ export const handleError = (error) => ({
 
 //hace una request de todos los countries a la api
 export const getAllCountries = () => async (dispatch) => {
-  const endpoint = `${BASE_API_URL}:${PORT}/countries`;
+  const endpoint = `${BASE_API_URL}/countries`;
   try {
     const { data } = await axios(endpoint);
     return dispatch({
@@ -37,7 +37,7 @@ export const getAllCountries = () => async (dispatch) => {
 
 //hace una request de todas las activities a la api
 export const getActivities = () => async (dispatch) => {
-  const endpoint = `${BASE_API_URL}:${PORT}/activities`;
+  const endpoint = `${BASE_API_URL}/activities`;
   try {
     const { data } = await axios(endpoint);
     return dispatch({
@@ -52,7 +52,7 @@ export const getActivities = () => async (dispatch) => {
 //haceuna request a la api de los countries que su nombre contenga el criterio de busqueda
 export const getCountries = (criterio) => async (dispatch) => {
   try {
-    const endpoint = `${BASE_API_URL}:${PORT}/countries?name=${criterio}`;
+    const endpoint = `${BASE_API_URL}/countries?name=${criterio}`;
     const { data } = await axios(endpoint);
     return dispatch({
       type: GET_COUNTRIES,

@@ -110,7 +110,7 @@ const Form = () => {
     event.preventDefault();
     console.log(activity, countriesSelect);
     try {
-      const endpoint = `${BASE_API_URL}:${PORT}/activities`;
+      const endpoint = `${BASE_API_URL}/activities`;
       await axios.post(endpoint, {
         activity: activity,
         countries: countriesSelect.map((element) => element[0]),

@@ -14,7 +14,7 @@ const Detail = () => {
   // Definimos una función asíncrona para obtener los datos del país
   const getCountry = async () => {
     try {
-      const endpoint = `${BASE_API_URL}:${PORT}/countries/${id}`;
+      const endpoint = `${BASE_API_URL}/countries/${id}`;
       const { data } = await axios(endpoint);
       setCountry(data);
       setError({});
