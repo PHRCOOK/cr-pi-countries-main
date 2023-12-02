@@ -3,7 +3,8 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import Error from "../error/error";
 import { memo, useEffect, useState } from "react";
-import { BASE_API_URL, PORT } from "../../apiData";
+import { BASE_API_URL } from "../../apiData";
+import { PORT } from "../../apiData";
 
 const Detail = () => {
   // Obtenemos el id del país desde los parámetros de la ruta
