@@ -42,7 +42,11 @@ const Nav = () => {
       method: "DELETE",
     });
     dispatch(deleteActivity(id));
-    window.location.reload();
+    // Restablecer los campos de filtro por actividad y el selector de handleDelete
+    setValorSelect({
+      ...valorSelect,
+      selectActivity: "",
+    });
   };
   //estado local para el control de los menues desplegables de continents y activities
   const [valorSelect, setValorSelect] = useState({
@@ -250,7 +254,7 @@ const Nav = () => {
               value={valorSelect.selectActivity}
             >
               <option value="" disabled>
-                Filtro por actividades
+                Filtro de actividades
               </option>
               {activitiesMenu?.map((activity, index) => (
                 <option key={index} value={activity}>
@@ -261,21 +265,24 @@ const Nav = () => {
             <button onClick={handleresetFilter}>Limpiar filtros</button>
           </aside>
           <aside className={styles.delete}>
+            <div className={styles.divDeleteButton}>
+              <button
+                className={styles.deleteButton}
+                onClick={() =>
+                  handleDelete(document.querySelector("#activitySelect").value)
+                }
+              >
+                Eliminar Actividad
+              </button>
+            </div>
             <div>
-              <select id="activitySelect">
+              <select className={styles.divDeleteSelector} id="activitySelect">
                 {activitiesDelete.map((activity) => (
                   <option key={activity.id} value={activity.id}>
                     {activity.name}
                   </option>
                 ))}
               </select>
-              <button
-                onClick={() =>
-                  handleDelete(document.querySelector("#activitySelect").value)
-                }
-              >
-                Eliminar actividad
-              </button>
             </div>
           </aside>
         </div>
