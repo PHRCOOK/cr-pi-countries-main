@@ -47,6 +47,7 @@ const Nav = () => {
       ...valorSelect,
       selectActivity: "",
     });
+    window.location.reload();
   };
   //estado local para el control de los menues desplegables de continents y activities
   const [valorSelect, setValorSelect] = useState({
