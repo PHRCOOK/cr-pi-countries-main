@@ -27,6 +27,12 @@
   margin-top: 10px;
 }
 
+.delete {
+  width: 400px;
+  margin-top: -500px;
+  margin-left: 1050px;
+}
+
 .menuContainer {
   float: left;
   width: 200px;

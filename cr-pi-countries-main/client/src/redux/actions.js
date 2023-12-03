@@ -14,6 +14,14 @@ export const RESET_FILTER = "RESET_FILTER";
 export const ERROR = "ERROR";
 export const RESET_ERROR = "RESET_ERROR";
 export const SET_PAGE = "SET_PAGE";
+export const DELETE_ACTIVITY = "DELETE_ACTIVITY";
+
+export const deleteActivity = (id) => {
+  return {
+    type: DELETE_ACTIVITY,
+    payload: id,
+  };
+};
 
 //menejo de errores de las actions
 export const handleError = (error) => ({

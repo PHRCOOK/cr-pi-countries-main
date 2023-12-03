@@ -21,7 +21,6 @@ const Page = ({ countriesSelect }) => {
           ))}
         </div>
       ) : null}{" "}
-      // Si no hay países seleccionados, no se renderiza nada
     </>
   );
 };

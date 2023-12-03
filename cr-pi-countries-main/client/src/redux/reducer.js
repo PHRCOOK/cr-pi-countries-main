@@ -13,6 +13,7 @@ import {
   FILTER_ACTIVITIES,
   FILTER_CONTINENT,
   RESET_FILTER,
+  DELETE_ACTIVITY,
 } from "./actions";
 
 const initialState = {
@@ -183,6 +184,13 @@ export const reducer = (state = initialState, action) => {
         countries: [...state.countries],
         sortedCountries: [...state.countries],
         pagination: updatePagination(state, 1, state.sortedCountries),
+      };
+    case DELETE_ACTIVITY:
+      return {
+        ...state,
+        activities: state.activities.filter(
+          (activity) => activity.id !== action.payload
+        ),
       };
 
     default:

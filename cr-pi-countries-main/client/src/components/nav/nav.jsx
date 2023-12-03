@@ -9,6 +9,7 @@ import {
   orderCountryPop,
   resetError,
   setPage,
+  deleteActivity,
 } from "../../redux/actions";
 import {
   getCountries,
@@ -17,13 +18,32 @@ import {
   resetFilter,
 } from "../../redux/actions";
 import { memo, useEffect, useState } from "react";
+import { BASE_API_URL, PORT } from "../../apiData";
 
 //renderiza la navbar y la sidebar, hace los dispatch para la busqueda el filtrado y el ordenamiento
 const Nav = () => {
   const location = useLocation().pathname;
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const activitiesDelete = useSelector((state) => state.activities);
 
+  useEffect(() => {
+    const fetchActivities = async () => {
+      const response = await fetch(`${BASE_API_URL}:${PORT}/activities`);
+      const data = await response.json();
+      dispatch(getActivities(data));
+    };
+
+    fetchActivities();
+  }, [dispatch]);
+
+  const handleDelete = async (id) => {
+    await fetch(`${BASE_API_URL}:${PORT}/activities/${id}`, {
+      method: "DELETE",
+    });
+    dispatch(deleteActivity(id));
+    window.location.reload();
+  };
   //estado local para el control de los menues desplegables de continents y activities
   const [valorSelect, setValorSelect] = useState({
     selectContinent: "",
@@ -239,6 +259,24 @@ const Nav = () => {
               ))}
             </select>
             <button onClick={handleresetFilter}>Limpiar filtros</button>
+          </aside>
+          <aside className={styles.delete}>
+            <div>
+              <select id="activitySelect">
+                {activitiesDelete.map((activity) => (
+                  <option key={activity.id} value={activity.id}>
+                    {activity.name}
+                  </option>
+                ))}
+              </select>
+              <button
+                onClick={() =>
+                  handleDelete(document.querySelector("#activitySelect").value)
+                }
+              >
+                Eliminar actividad
+              </button>
+            </div>
           </aside>
         </div>
       ) : null}
