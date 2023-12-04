@@ -5,7 +5,6 @@ import { getAllCountries, handleError } from "../../redux/actions";
 import axios from "axios";
 import Error from "../error/error";
 import Alert from "../alert/alert";
-import { BASE_API_URL, PORT } from "../../apiData";
 
 const Form = () => {
   // Usamos los hooks de Redux para obtener el estado y despachar acciones
@@ -110,8 +109,7 @@ const Form = () => {
     event.preventDefault();
     console.log(activity, countriesSelect);
     try {
-      const endpoint = `${BASE_API_URL}:${PORT}/activities`;
-      await axios.post(endpoint, {
+      await axios.post(`/activities`, {
         activity: activity,
         countries: countriesSelect.map((element) => element[0]),
       });
@@ -121,22 +119,6 @@ const Form = () => {
       return dispatch(handleError(error));
     }
   };
-  //BASE DE DATOS REMOTA
-  // const handleCreate = async (event) => {
-  //   event.preventDefault();
-  //   console.log(activity, countriesSelect);
-  //   try {
-  //     const endpoint = `${BASE_API_URL}/activities`;
-  //     await axios.post(endpoint, {
-  //       activity: activity,
-  //       countries: countriesSelect.map((element) => element[0]),
-  //     });
-  //     mostrarAlertHandler();
-  //     clearForm();
-  //   } catch (error) {
-  //     return dispatch(handleError(error));
-  //   }
-  // };
 
   // Esta función maneja la eliminación de un país seleccionado
   // Actualiza el estado de los países seleccionados eliminando el país seleccionado

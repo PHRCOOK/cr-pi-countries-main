@@ -1,5 +1,4 @@
 import axios from "axios";
-import { BASE_API_URL, PORT } from "../apiData";
 export const GET_COUNTRIES = "GET_COUNTRIES";
 export const GET_ALL_COUNTRIES = "GET_ALL_COUNTRIES";
 export const GET_ACTIVITIES = "GET_ACTIVITIES";
@@ -32,9 +31,8 @@ export const handleError = (error) => ({
 
 //hace una request de todos los countries a la api
 export const getAllCountries = () => async (dispatch) => {
-  const endpoint = `${BASE_API_URL}:${PORT}/countries`;
   try {
-    const { data } = await axios(endpoint);
+    const { data } = await axios(`/countries`);
     return dispatch({
       type: GET_ALL_COUNTRIES,
       payload: data,
@@ -43,25 +41,11 @@ export const getAllCountries = () => async (dispatch) => {
     return dispatch(handleError(error));
   }
 };
-//BASE DE DATOS REMOTA
-// export const getAllCountries = () => async (dispatch) => {
-//   const endpoint = `${BASE_API_URL}/countries`;
-//   try {
-//     const { data } = await axios(endpoint);
-//     return dispatch({
-//       type: GET_ALL_COUNTRIES,
-//       payload: data,
-//     });
-//   } catch (error) {
-//     return dispatch(handleError(error));
-//   }
-// };
 
 //hace una request de todas las activities a la api
 export const getActivities = () => async (dispatch) => {
-  const endpoint = `${BASE_API_URL}:${PORT}/activities`;
   try {
-    const { data } = await axios(endpoint);
+    const { data } = await axios(`/activities`);
     return dispatch({
       type: GET_ACTIVITIES,
       payload: data,
@@ -70,25 +54,11 @@ export const getActivities = () => async (dispatch) => {
     return dispatch(handleError(error));
   }
 };
-//BASE DE DATOS REMOTA
-// export const getActivities = () => async (dispatch) => {
-//   const endpoint = `${BASE_API_URL}/activities`;
-//   try {
-//     const { data } = await axios(endpoint);
-//     return dispatch({
-//       type: GET_ACTIVITIES,
-//       payload: data,
-//     });
-//   } catch (error) {
-//     return dispatch(handleError(error));
-//   }
-// };
 
 //haceuna request a la api de los countries que su nombre contenga el criterio de busqueda
 export const getCountries = (criterio) => async (dispatch) => {
   try {
-    const endpoint = `${BASE_API_URL}:${PORT}/countries?name=${criterio}`;
-    const { data } = await axios(endpoint);
+    const { data } = await axios(`/countries?name=${criterio}`);
     return dispatch({
       type: GET_COUNTRIES,
       payload: data,
@@ -97,19 +67,7 @@ export const getCountries = (criterio) => async (dispatch) => {
     return dispatch(handleError(error));
   }
 };
-//BASE DE DATOS REMOTA
-// export const getCountries = (criterio) => async (dispatch) => {
-//   try {
-//     const endpoint = `${BASE_API_URL}/countries?name=${criterio}`;
-//     const { data } = await axios(endpoint);
-//     return dispatch({
-//       type: GET_COUNTRIES,
-//       payload: data,
-//     });
-//   } catch (error) {
-//     return dispatch(handleError(error));
-//   }
-// };
+
 //setea la pagina seleccionada en el estado global
 export const setPage = (page) => {
   return {

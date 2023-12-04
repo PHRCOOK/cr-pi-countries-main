@@ -18,7 +18,7 @@ import {
   resetFilter,
 } from "../../redux/actions";
 import { memo, useEffect, useState } from "react";
-import { BASE_API_URL, PORT } from "../../apiData";
+import axios from "axios";
 
 //renderiza la navbar y la sidebar, hace los dispatch para la busqueda el filtrado y el ordenamiento
 const Nav = () => {
@@ -28,11 +28,17 @@ const Nav = () => {
   const activitiesDelete = useSelector((state) => state.activities);
 
   //hace un fetch para obtener las actividades y las guarda en el estado global
+
+  //estado local para el control de los menues desplegables de continents y activities
+  const [valorSelect, setValorSelect] = useState({
+    selectContinent: "",
+    selectActivity: "",
+  });
+
   useEffect(() => {
     const fetchActivities = async () => {
-      const response = await fetch(`${BASE_API_URL}:${PORT}/activities`);
-      const data = await response.json();
-      dispatch(getActivities(data));
+      const response = await axios.get(`/activities`);
+      dispatch(getActivities(response.data));
     };
 
     fetchActivities();
@@ -40,9 +46,7 @@ const Nav = () => {
 
   //elimina una actividad y actualiza el estado global de activities
   const handleDelete = async (id) => {
-    await fetch(`${BASE_API_URL}:${PORT}/activities/${id}`, {
-      method: "DELETE",
-    });
+    await axios.delete(`/activities/${id}`);
     dispatch(deleteActivity(id));
     // Restablecer los campos de filtro por actividad y el selector de handleDelete
     setValorSelect({
@@ -51,11 +55,6 @@ const Nav = () => {
     });
     window.location.reload();
   };
-  //estado local para el control de los menues desplegables de continents y activities
-  const [valorSelect, setValorSelect] = useState({
-    selectContinent: "",
-    selectActivity: "",
-  });
 
   //estados locales para el control de los inputs
   const [valueInput, setValueInput] = useState("");

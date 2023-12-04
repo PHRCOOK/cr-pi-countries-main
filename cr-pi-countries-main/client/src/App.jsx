@@ -10,6 +10,10 @@ import { getAllCountries } from "./redux/actions";
 import Home from "./components/home/home";
 import Error from "./components/error/error";
 import Form from "./components/form/form";
+import axios from "axios";
+
+axios.defaults.baseURL = "http://localhost:3001";
+// axios.defaults.baseURL =//"https://cr-pi-countries-main-server-production.up.railway.app";
 
 function App() {
   const dispatch = useDispatch();

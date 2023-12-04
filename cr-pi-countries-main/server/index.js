@@ -2,7 +2,6 @@ require("dotenv").config({ path: "./api/.env" });
 const axios = require("axios");
 const server = require("./src/server");
 const { conn } = require("./src/db.js");
-// const PORT = 3001;
 
 const populateDb = require("./src/controllers/populateDb.js");
 
