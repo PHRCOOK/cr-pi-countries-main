@@ -125,19 +125,3 @@
     width: 50%;
   }
 }
-
-@media (max-width: 768px) {
-  .principalContainer {
-    margin-left: 0;
-  }
-
-  .pageSelector {
-    width: 100%;
-    margin-top: 50px;
-  }
-
-  .btnPage1,
-  .btnPage2 {
-    width: 50%;
-  }
-}
