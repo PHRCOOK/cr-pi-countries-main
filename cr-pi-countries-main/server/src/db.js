@@ -16,25 +16,25 @@ const {
 
 //CONEXION BASE DE DATOS LOCAL
 
-const sequelize = new Sequelize(
-  `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/countries`,
-  {
-    logging: false,
-    native: false,
-  }
-);
-
-//CONEXION BASE DE DATOS REMOTO
-
-//postgresql://postgres:G-cgB6C1aA14DAg*f-3dAa*Gdg1*C6dd@monorail.proxy.rlwy.net:16864/railway
-
 // const sequelize = new Sequelize(
-//   `postgresql://postgres:${PGPASSWORD}@${PGHOST}:${PGPORT}/${PGDATABASE}`,
+//   `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/countries`,
 //   {
 //     logging: false,
 //     native: false,
 //   }
 // );
+
+//CONEXION BASE DE DATOS REMOTO
+
+//postgresql://postgres:G-cgB6C1aA14DAg*f-3dAa*Gdg1*C6dd@monorail.proxy.rlwy.net:16864/railway
+
+const sequelize = new Sequelize(
+  `postgresql://postgres:${PGPASSWORD}@${PGHOST}:${PGPORT}/${PGDATABASE}`,
+  {
+    logging: false,
+    native: false,
+  }
+);
 const basename = path.basename(__filename);
 
 const modelDefiners = [];

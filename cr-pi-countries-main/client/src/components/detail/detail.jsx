@@ -14,32 +14,9 @@ const Detail = () => {
   const [error, setError] = useState({});
   // Definimos una función asíncrona para obtener los datos del país
 
-  const getCountry = async () => {
-    try {
-      const endpoint = `${BASE_API_URL}:${PORT}/countries/${id}`;
-      const { data } = await axios(endpoint);
-      setCountry(data);
-      setError({});
-    } catch (error) {
-      error.response
-        ? setError({
-            ...error,
-            status: error.response.status,
-            message: error.response.statusText,
-            description: error.response.data.error,
-          })
-        : setError({
-            ...error,
-            status: "500",
-            message: error.message,
-            description: "Failed to load resource",
-          });
-    }
-  };
-  //BASE DE DATOS REMOTA
   // const getCountry = async () => {
   //   try {
-  //     const endpoint = `${BASE_API_URL}/countries/${id}`;
+  //     const endpoint = `${BASE_API_URL}:${PORT}/countries/${id}`;
   //     const { data } = await axios(endpoint);
   //     setCountry(data);
   //     setError({});
@@ -59,6 +36,29 @@ const Detail = () => {
   //         });
   //   }
   // };
+  //BASE DE DATOS REMOTA
+  const getCountry = async () => {
+    try {
+      const endpoint = `${BASE_API_URL}/countries/${id}`;
+      const { data } = await axios(endpoint);
+      setCountry(data);
+      setError({});
+    } catch (error) {
+      error.response
+        ? setError({
+            ...error,
+            status: error.response.status,
+            message: error.response.statusText,
+            description: error.response.data.error,
+          })
+        : setError({
+            ...error,
+            status: "500",
+            message: error.message,
+            description: "Failed to load resource",
+          });
+    }
+  };
   // Usamos el hook useEffect para llamar a getCountry cuando el componente se monta
   useEffect(() => {
     getCountry();
