@@ -185,7 +185,7 @@ export const reducer = (state = initialState, action) => {
         sortedCountries: [...state.countries],
         pagination: updatePagination(state, 1, state.sortedCountries),
       };
-    //Elimina las actividades de la base de datos
+    //quita las actividades de la base de datos
     case DELETE_ACTIVITY:
       return {
         ...state,

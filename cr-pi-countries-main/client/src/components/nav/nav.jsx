@@ -27,73 +27,30 @@ const Nav = () => {
   const navigate = useNavigate();
   const activitiesDelete = useSelector((state) => state.activities);
 
-  // Usamos el hook useEffect para realizar acciones al montar el componente
-  // useEffect(() => {
-  //   // Definimos una función asíncrona para obtener las actividades
-  //   const fetchActivities = async () => {
-  //     // Realizamos una petición GET a la API para obtener las actividades
-  //     const response = await fetch(`${BASE_API_URL}:${PORT}/activities`);
-  //     // Convertimos la respuesta a JSON
-  //     const data = await response.json();
-  //     // Despachamos una acción para actualizar el estado con las actividades obtenidas
-  //     dispatch(getActivities(data));
-  //   };
-
-  //   // Llamamos a la función para obtener las actividades
-  //   fetchActivities();
-  // }, [dispatch]); // Dependencia del hook useEffect
-
-  // // Definimos una función para manejar la eliminación de una actividad
-  // const handleDelete = async (id) => {
-  //   // Realizamos una petición DELETE a la API para eliminar la actividad
-  //   await fetch(`${BASE_API_URL}:${PORT}/activities/${id}`, {
-  //     method: "DELETE",
-  //   });
-  //   // Despachamos una acción para eliminar la actividad del estado
-  //   dispatch(deleteActivity(id));
-  //   // Restablecemos los campos de filtro por actividad y el selector de handleDelete
-  //   setValorSelect({
-  //     ...valorSelect,
-  //     selectActivity: "",
-  //   });
-  //   // Recargamos la página
-  //   window.location.reload();
-  // };
-
-  //Forma remota deployment
-
+  //hace un fetch para obtener las actividades y las guarda en el estado global
   useEffect(() => {
-    // Definimos una función asíncrona para obtener las actividades
     const fetchActivities = async () => {
-      // Realizamos una petición GET a la API para obtener las actividades
-      const response = await fetch(`${BASE_API_URL}/activities`);
-      // Convertimos la respuesta a JSON
+      const response = await fetch(`${BASE_API_URL}:${PORT}/activities`);
       const data = await response.json();
-      // Despachamos una acción para actualizar el estado con las actividades obtenidas
       dispatch(getActivities(data));
     };
 
-    // Llamamos a la función para obtener las actividades
     fetchActivities();
-  }, [dispatch]); // Dependencia del hook useEffect
+  }, [dispatch]);
 
-  // Definimos una función para manejar la eliminación de una actividad
+  //elimina una actividad y actualiza el estado global de activities
   const handleDelete = async (id) => {
-    // Realizamos una petición DELETE a la API para eliminar la actividad
-    await fetch(`${BASE_API_URL}/activities/${id}`, {
+    await fetch(`${BASE_API_URL}:${PORT}/activities/${id}`, {
       method: "DELETE",
     });
-    // Despachamos una acción para eliminar la actividad del estado
     dispatch(deleteActivity(id));
-    // Restablecemos los campos de filtro por actividad y el selector de handleDelete
+    // Restablecer los campos de filtro por actividad y el selector de handleDelete
     setValorSelect({
       ...valorSelect,
       selectActivity: "",
     });
-    // Recargamos la página
     window.location.reload();
   };
-
   //estado local para el control de los menues desplegables de continents y activities
   const [valorSelect, setValorSelect] = useState({
     selectContinent: "",
