@@ -12,36 +12,35 @@ import Error from "./components/error/error";
 import Form from "./components/form/form";
 import axios from "axios";
 
-axios.defaults.baseURL = "http://localhost:3001";
-// axios.defaults.baseURL =//"https://cr-pi-countries-main-server-production.up.railway.app";
+// axios.defaults.baseURL = "http://localhost:3001";
+axios.defaults.baseURL = //"https://cr-pi-countries-main-server-production.up.railway.app";
+  function App() {
+    const dispatch = useDispatch();
+    const { countries } = useSelector((state) => state);
 
-function App() {
-  const dispatch = useDispatch();
-  const { countries } = useSelector((state) => state);
+    //si el estado global contries esta vacio se actualiza con todos los paises
+    useEffect(() => {
+      if (countries.length === 0) dispatch(getAllCountries());
+    }, [dispatch, countries]);
 
-  //si el estado global contries esta vacio se actualiza con todos los paises
-  useEffect(() => {
-    if (countries.length === 0) dispatch(getAllCountries());
-  }, [dispatch, countries]);
-
-  //el componente nav esta disponible en todas las rutas
-  //su define la ruta * para los errores 404 del cliente
-  return (
-    <div className="App">
-      <Nav />
-      <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/detail/:id" element={<Detail />} />
-        <Route path="/activities" element={<Form />} />
-        <Route
-          path="*"
-          element={<Error status={404} message={"Not Found!"} />}
-        />
-      </Routes>
-      <Footer />
-    </div>
-  );
-}
+    //el componente nav esta disponible en todas las rutas
+    //su define la ruta * para los errores 404 del cliente
+    return (
+      <div className="App">
+        <Nav />
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/detail/:id" element={<Detail />} />
+          <Route path="/activities" element={<Form />} />
+          <Route
+            path="*"
+            element={<Error status={404} message={"Not Found!"} />}
+          />
+        </Routes>
+        <Footer />
+      </div>
+    );
+  };
 
 export default App;
