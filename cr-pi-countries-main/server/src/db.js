@@ -26,7 +26,7 @@ const {
 
 //CONEXION BASE DE DATOS REMOTO
 
-postgresql://postgres:G-cgB6C1aA14DAg*f-3dAa*Gdg1*C6dd@monorail.proxy.rlwy.net:16864/railway
+// postgresql://postgres:G-cgB6C1aA14DAg*f-3dAa*Gdg1*C6dd@monorail.proxy.rlwy.net:16864/railway
 
 const sequelize = new Sequelize(
   `postgresql://postgres:${PGPASSWORD}@${PGHOST}:${PGPORT}/${PGDATABASE}`,
