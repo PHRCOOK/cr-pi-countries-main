@@ -17,7 +17,7 @@ server.use(morgan("dev"));
 server.use((req, res, next) => {
   res.header(
     "Access-Control-Allow-Origin",
-    "https://cr-pi-countries-main-sand.vercel.app/"
+    "https://cr-pi-countries-main-server-production.up.railway.app"
   );
   res.header("Access-Control-Allow-Credentials", "true");
   res.header(
