@@ -4,7 +4,7 @@ import axios from "axios";
 import Error from "../error/error";
 import { memo, useEffect, useState } from "react";
 import { BASE_API_URL } from "../../apiData";
-import { PORT } from "../../apiData";
+// import { PORT } from "../../apiData";
 
 const Detail = () => {
   // Obtenemos el id del país desde los parámetros de la ruta

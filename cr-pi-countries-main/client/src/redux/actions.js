@@ -1,5 +1,5 @@
 import axios from "axios";
-import { BASE_API_URL, PORT } from "../apiData";
+import { BASE_API_URL } from "../apiData";
 export const GET_COUNTRIES = "GET_COUNTRIES";
 export const GET_ALL_COUNTRIES = "GET_ALL_COUNTRIES";
 export const GET_ACTIVITIES = "GET_ACTIVITIES";

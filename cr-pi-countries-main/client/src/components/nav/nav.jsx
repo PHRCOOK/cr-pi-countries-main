@@ -18,7 +18,7 @@ import {
   resetFilter,
 } from "../../redux/actions";
 import { memo, useEffect, useState } from "react";
-import { BASE_API_URL, PORT } from "../../apiData";
+import { BASE_API_URL } from "../../apiData";
 
 //renderiza la navbar y la sidebar, hace los dispatch para la busqueda el filtrado y el ordenamiento
 const Nav = () => {
@@ -58,15 +58,14 @@ const Nav = () => {
   const activitiesDelete = useSelector((state) => state.activities);
 
   //hace un fetch para obtener las actividades y las guarda en el estado global
-  useEffect(() => {
-    const fetchActivities = async () => {
-      const response = await fetch(`${BASE_API_URL}/activities`);
-      const data = await response.json();
-      dispatch(getActivities(data));
-    };
 
-    fetchActivities();
-  }, [dispatch]);
+  const fetchActivities = async () => {
+    const response = await fetch(`${BASE_API_URL}/activities`);
+    const data = await response.json();
+    dispatch(getActivities(data));
+  };
+
+  fetchActivities();
 
   //elimina una actividad y actualiza el estado global de activities
   const handleDelete = async (id) => {
