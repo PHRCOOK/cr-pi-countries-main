@@ -18,58 +18,29 @@ import {
   resetFilter,
 } from "../../redux/actions";
 import { memo, useEffect, useState } from "react";
-import { BASE_API_URL } from "../../apiData";
+import { BASE_API_URL, PORT } from "../../apiData";
 
 //renderiza la navbar y la sidebar, hace los dispatch para la busqueda el filtrado y el ordenamiento
 const Nav = () => {
-  // const location = useLocation().pathname;
-  // const dispatch = useDispatch();
-  // const navigate = useNavigate();
-  // const activitiesDelete = useSelector((state) => state.activities);
-
-  // //hace un fetch para obtener las actividades y las guarda en el estado global
-  // useEffect(() => {
-  //   const fetchActivities = async () => {
-  //     const response = await fetch(`${BASE_API_URL}:${PORT}/activities`);
-  //     const data = await response.json();
-  //     dispatch(getActivities(data));
-  //   };
-
-  //   fetchActivities();
-  // }, [dispatch]);
-
-  // //elimina una actividad y actualiza el estado global de activities
-  // const handleDelete = async (id) => {
-  //   await fetch(`${BASE_API_URL}:${PORT}/activities/${id}`, {
-  //     method: "DELETE",
-  //   });
-  //   dispatch(deleteActivity(id));
-  //   // Restablecer los campos de filtro por actividad y el selector de handleDelete
-  //   setValorSelect({
-  //     ...valorSelect,
-  //     selectActivity: "",
-  //   });
-  //   window.location.reload();
-  // };
-
   const location = useLocation().pathname;
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const activitiesDelete = useSelector((state) => state.activities);
 
   //hace un fetch para obtener las actividades y las guarda en el estado global
+  useEffect(() => {
+    const fetchActivities = async () => {
+      const response = await fetch(`${BASE_API_URL}:${PORT}/activities`);
+      const data = await response.json();
+      dispatch(getActivities(data));
+    };
 
-  const fetchActivities = async () => {
-    const response = await fetch(`${BASE_API_URL}/activities`);
-    const data = await response.json();
-    dispatch(getActivities(data));
-  };
-
-  fetchActivities();
+    fetchActivities();
+  }, [dispatch]);
 
   //elimina una actividad y actualiza el estado global de activities
   const handleDelete = async (id) => {
-    await fetch(`${BASE_API_URL}/activities/${id}`, {
+    await fetch(`${BASE_API_URL}:${PORT}/activities/${id}`, {
       method: "DELETE",
     });
     dispatch(deleteActivity(id));
