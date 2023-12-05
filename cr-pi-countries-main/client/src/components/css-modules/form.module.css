@@ -228,3 +228,31 @@ img:hover::after {
   background: #ddd;
   border: 1px solid aliceblue;
 }
+
+/* Estilos para pantallas medianas */
+@media screen and (max-width: 768px) {
+  .container {
+    min-width: 60vw;
+    width: 70vw;
+  }
+
+  .name,
+  .duration,
+  .input {
+    width: 150px;
+  }
+}
+
+/* Estilos para pantallas pequeñas */
+@media screen and (max-width: 480px) {
+  .container {
+    min-width: 80vw;
+    width: 90vw;
+  }
+
+  .name,
+  .duration,
+  .input {
+    width: 100px;
+  }
+}

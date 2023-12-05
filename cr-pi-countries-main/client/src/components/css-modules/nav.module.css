@@ -247,3 +247,134 @@
   background-color: #444;
   filter: brightness(90%);
 }
+
+/* Estilos para pantallas grandes */
+@media screen and (max-width: 1280px) {
+  .delete {
+    width: 400px;
+    margin-top: -500px;
+    margin-left: 810px;
+  }
+
+  .divDeleteSelector {
+    width: 200px;
+    margin-left: -285px;
+  }
+
+  .divDeleteButton {
+    margin-left: -65px;
+    width: 200px;
+    height: 90px;
+  }
+
+  .deleteButton {
+    width: 200px;
+    height: 70px;
+  }
+
+  .menuContainer {
+    width: 200px;
+  }
+
+  .menuOrder1 {
+    height: 70px;
+  }
+
+  .menuFilter {
+    height: 220px;
+  }
+
+  .menuFilter select {
+    max-width: 180px;
+  }
+
+  .goToLanding {
+    margin-left: 200px;
+  }
+}
+/* Estilos para pantallas medianas */
+@media screen and (max-width: 768px) {
+  .delete {
+    width: 300px;
+    margin-top: -400px;
+    margin-left: 710px;
+  }
+
+  .divDeleteSelector {
+    width: 150px;
+    margin-left: -235px;
+  }
+
+  .divDeleteButton {
+    margin-left: -45px;
+    width: 150px;
+    height: 70px;
+  }
+
+  .deleteButton {
+    width: 150px;
+    height: 55px;
+  }
+
+  .menuContainer {
+    width: 150px;
+  }
+
+  .menuOrder1 {
+    height: 50px;
+  }
+
+  .menuFilter {
+    height: 180px;
+  }
+
+  .menuFilter select {
+    max-width: 120px;
+  }
+
+  .goToLanding {
+    margin-left: 150px;
+  }
+}
+/* Estilos para pantallas pequeñas */
+@media screen and (max-width: 480px) {
+  .delete {
+    width: 200px;
+    margin-top: -300px;
+    margin-left: 600px;
+  }
+
+  .divDeleteSelector {
+    width: 125px;
+  }
+
+  .divDeleteButton {
+    width: 125px;
+    height: 30px;
+  }
+
+  .deleteButton {
+    width: 125px;
+    height: 30px;
+  }
+
+  .menuContainer {
+    width: 100px;
+  }
+
+  .menuOrder1 {
+    height: 40px;
+  }
+
+  .menuFilter {
+    height: 150px;
+  }
+
+  .menuFilter select {
+    max-width: 100px;
+  }
+
+  .goToLanding {
+    margin-left: 100px;
+  }
+}

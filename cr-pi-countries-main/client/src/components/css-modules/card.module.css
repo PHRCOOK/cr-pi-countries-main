@@ -61,3 +61,43 @@
   margin-top: 1px;
   margin-bottom: 1px;
 }
+
+/* Estilos para pantallas medianas */
+@media screen and (max-width: 768px) {
+  .cardContainer {
+    width: 120px;
+    height: 180px;
+  }
+
+  .image {
+    height: 60px;
+  }
+
+  .name {
+    font-size: 16px;
+  }
+
+  .continent {
+    font-size: 12px;
+  }
+}
+
+/* Estilos para pantallas pequeñas */
+@media screen and (max-width: 480px) {
+  .cardContainer {
+    width: 100px;
+    height: 150px;
+  }
+
+  .image {
+    height: 50px;
+  }
+
+  .name {
+    font-size: 14px;
+  }
+
+  .continent {
+    font-size: 10px;
+  }
+}

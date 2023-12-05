@@ -52,3 +52,27 @@
   background-color: #444;
   filter: brightness(90%);
 }
+
+/* Estilos para pantallas medianas */
+@media screen and (max-width: 768px) {
+  .cardError {
+    min-width: 60%;
+    width: 70%;
+  }
+
+  .cardError h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Estilos para pantallas pequeñas */
+@media screen and (max-width: 480px) {
+  .cardError {
+    min-width: 80%;
+    width: 90%;
+  }
+
+  .cardError h1 {
+    font-size: 1.5rem;
+  }
+}

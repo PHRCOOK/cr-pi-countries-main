@@ -27,7 +27,7 @@ body {
   margin: 0;
   display: flex;
   background-image: url("C:\Users\USUARIO\Desktop\cr-pi-countries-main\cr-pi-countries-main\client\src\assets\Ciudades2.jpg");
-  background-size: cover;
+  background-size: 100%;
   background-repeat: repeat;
 }
 
@@ -65,5 +65,40 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+}
+
+/* Estilos para pantallas medianas */
+@media screen and (max-width: 768px) {
+  body {
+    background-image: url("C:\Users\USUARIO\Desktop\cr-pi-countries-main\cr-pi-countries-main\client\src\assets\Ciudades2.jpg");
+    background-size: cover;
+    background-repeat: repeat;
+  }
+
+  h1 {
+    font-size: 2.5em;
+  }
+
+  button {
+    padding: 0.5em 1em;
+    font-size: 0.9em;
+  }
+}
+
+/* Estilos para pantallas pequeñas */
+@media screen and (max-width: 480px) {
+  body {
+    background-image: url("C:\Users\USUARIO\Desktop\cr-pi-countries-main\cr-pi-countries-main\client\src\assets\Ciudades2.jpg");
+    background-size: 100%;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  button {
+    padding: 0.4em 0.8em;
+    font-size: 0.8em;
   }
 }

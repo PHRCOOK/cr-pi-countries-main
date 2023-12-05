@@ -93,18 +93,3 @@
   margin-top: 0px;
   font-style: normal;
 }
-
-@media (max-width: 850px) {
-  .bannerFlag h2 {
-    font-size: 1.5rem;
-  }
-}
-
-@media (max-width: 690px) {
-  .bannerFlag {
-    flex-direction: column;
-  }
-  .contentDetail {
-    margin-left: 25px;
-  }
-}

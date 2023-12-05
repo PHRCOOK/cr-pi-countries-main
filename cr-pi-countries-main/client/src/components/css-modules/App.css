@@ -40,3 +40,35 @@
 .read-the-docs {
   color: #888;
 }
+
+/* Estilos para pantallas medianas */
+@media screen and (max-width: 768px) {
+  #root {
+    padding: 1rem;
+  }
+
+  .logo {
+    height: 4em;
+    padding: 1em;
+  }
+
+  .card {
+    padding: 1em;
+  }
+}
+
+/* Estilos para pantallas pequeñas */
+@media screen and (max-width: 480px) {
+  #root {
+    padding: 0.5rem;
+  }
+
+  .logo {
+    height: 3em;
+    padding: 0.5em;
+  }
+
+  .card {
+    padding: 0.5em;
+  }
+}

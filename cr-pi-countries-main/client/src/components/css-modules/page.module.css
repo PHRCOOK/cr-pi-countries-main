@@ -13,3 +13,17 @@
   flex-grow: 1;
   margin-bottom: -3px;
 }
+
+/* Estilos para pantallas medianas */
+@media screen and (max-width: 768px) {
+  .cardsContainer {
+    width: 95%;
+  }
+}
+
+/* Estilos para pantallas pequeñas */
+@media screen and (max-width: 480px) {
+  .cardsContainer {
+    width: 100%;
+  }
+}
