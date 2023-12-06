@@ -12,7 +12,7 @@ body {
   display: flex;
   background-image: url("C:\Users\USUARIO\Desktop\cr-pi-countries-main\cr-pi-countries-main\client\src\assets\Ciudades2.jpg");
   background-size: cover;
-  background-repeat: repeat;
+  background-repeat: no-repeat;
 }
 
 h1 {
@@ -58,6 +58,8 @@ button:focus-visible {
     margin-top: 10px;
     display: flex;
     background-image: url("C:\Users\USUARIO\Desktop\cr-pi-countries-main\cr-pi-countries-main\client\src\assets\Ciudades2.jpg");
+    background-size: cover;
+    background-repeat: repeat;
   }
 
   h1 {
@@ -74,8 +76,10 @@ button:focus-visible {
 @media screen and (max-width: 480px) {
   body {
     margin-top: 10px;
+    display: flex;
     background-image: url("C:\Users\USUARIO\Desktop\cr-pi-countries-main\cr-pi-countries-main\client\src\assets\Ciudades2.jpg");
-    background-size: 100%;
+    background-size: cover;
+    background-repeat: repeat;
   }
 
   h1 {
