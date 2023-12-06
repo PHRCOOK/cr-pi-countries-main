@@ -61,7 +61,24 @@
   margin-top: 1px;
   margin-bottom: 1px;
 }
+@media screen and (min-width: 769px) and (max-width: 1241px) {
+  .cardContainer {
+    width: 150px;
+    height: 215px;
+  }
 
+  .image {
+    height: 80px;
+  }
+
+  .name {
+    font-size: 18px;
+  }
+
+  .continent {
+    font-size: 14px;
+  }
+}
 /* Estilos para pantallas medianas */
 @media screen and (max-width: 768px) {
   .cardContainer {

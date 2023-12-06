@@ -41,6 +41,26 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
   animation: vibrate 0.3s linear infinite;
 }
+@keyframes vibrate {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-3px, 3px);
+  }
+  40% {
+    transform: translate(3px, -3px);
+  }
+  60% {
+    transform: translate(-3px, -3px);
+  }
+  80% {
+    transform: translate(3px, 3px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
 
 /* Estilos para pantallas medianas */
 @media screen and (max-width: 768px) {
@@ -58,7 +78,7 @@
 }
 
 /* Estilos para pantallas pequeñas */
-@media screen and (max-width: 480px) {
+@media screen and (width: 480px) {
   .imageContainer {
     height: 240px;
   }

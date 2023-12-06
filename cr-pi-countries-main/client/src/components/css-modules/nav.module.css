@@ -249,7 +249,7 @@
 }
 
 /* Estilos para pantallas grandes */
-@media screen and (max-width: 1280px) {
+@media screen and (min-width: 769px) and (max-width: 1241px) {
   .delete {
     width: 400px;
     margin-top: -500px;
@@ -258,7 +258,7 @@
 
   .divDeleteSelector {
     width: 200px;
-    margin-left: -285px;
+    margin-left: -325px;
   }
 
   .divDeleteButton {
@@ -292,8 +292,9 @@
     margin-left: 200px;
   }
 }
+
 /* Estilos para pantallas medianas */
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 481px) and (max-width: 768px) {
   .delete {
     width: 300px;
     margin-top: -400px;
@@ -346,11 +347,13 @@
 
   .divDeleteSelector {
     width: 125px;
+    margin-left: -350px;
   }
 
   .divDeleteButton {
     width: 125px;
     height: 30px;
+    margin-left: -140px;
   }
 
   .deleteButton {

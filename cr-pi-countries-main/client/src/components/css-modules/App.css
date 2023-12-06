@@ -40,6 +40,20 @@
 .read-the-docs {
   color: #888;
 }
+@media screen and (min-width: 769px) and (max-width: 1241px) {
+  #root {
+    padding: 1rem;
+  }
+
+  .logo {
+    height: 4em;
+    padding: 1em;
+  }
+
+  .card {
+    padding: 1, 5em;
+  }
+}
 
 /* Estilos para pantallas medianas */
 @media screen and (max-width: 768px) {

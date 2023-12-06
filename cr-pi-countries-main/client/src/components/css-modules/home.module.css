@@ -148,7 +148,7 @@
 /* Estilos para pantallas pequeñas */
 @media screen and (max-width: 480px) {
   .principalContainer {
-    margin-left: 50px;
+    margin-left: 100px;
   }
 
   .pageSelector {
