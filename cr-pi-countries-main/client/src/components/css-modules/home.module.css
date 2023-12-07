@@ -12,16 +12,13 @@
 }
 
 .pageSelector {
-  flex-grow: 0;
   margin-right: 0px;
-  margin-left: -300px;
+  margin-left: -200px;
   margin-top: -110px;
   margin-bottom: 14px;
   border-radius: 5px;
   background-color: #333b;
   border: #0d0d0d solid 3px;
-  padding-left: -100px;
-  padding-right: 100px;
   width: 1190px;
 }
 
@@ -73,12 +70,6 @@
   border-radius: 3px;
 }
 
-.btnPageSelected {
-  background-color: #333;
-  color: #eee;
-  border: #aaa solid 3px;
-  border-radius: 10px;
-}
 .btnPage2 {
   background-color: #aaa0;
   border: #3330 solid 3px;
@@ -99,13 +90,6 @@
   background-color: #777;
   border: #aaa inset 3px;
   border-radius: 3px;
-}
-
-.btnPageSelected {
-  background-color: #333;
-  color: #eee;
-  border: #aaa solid 3px;
-  border-radius: 10px;
 }
 
 @media screen and (max-width: 1280px) {

@@ -1,53 +1,20 @@
 #root {
   max-width: 1280px;
-  margin: 0 auto;
+  margin: auto;
+  margin-top: -5px;
   padding: 2rem;
+  padding-right: -2rem;
   text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
 }
 
 .card {
   padding: 2em;
 }
 
-.read-the-docs {
-  color: #888;
-}
 @media screen and (min-width: 769px) and (max-width: 1241px) {
   #root {
+    margin-top: 0;
     padding: 1, 5rem;
-  }
-
-  .logo {
-    height: 4em;
-    padding: 1em;
   }
 
   .card {
@@ -58,12 +25,8 @@
 /* Estilos para pantallas medianas */
 @media screen and (max-width: 768px) {
   #root {
+    margin-top: 10px;
     padding: 1rem;
-  }
-
-  .logo {
-    height: 4em;
-    padding: 1em;
   }
 
   .card {
@@ -74,12 +37,8 @@
 /* Estilos para pantallas pequeñas */
 @media screen and (max-width: 480px) {
   #root {
+    margin-top: 10px;
     padding: 0.5rem;
-  }
-
-  .logo {
-    height: 3em;
-    padding: 0.5em;
   }
 
   .card {
