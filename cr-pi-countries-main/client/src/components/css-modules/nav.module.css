@@ -249,7 +249,7 @@
 }
 
 /* Estilos para pantallas grandes */
-@media screen and (min-width: 769px) and (max-width: 1241px) {
+@media screen and (min-width: 769px) and (max-width: 1280px) {
   .delete {
     width: 400px;
     margin-top: -500px;
@@ -258,11 +258,11 @@
 
   .divDeleteSelector {
     width: 200px;
-    margin-left: -325px;
+    margin-left: -25px;
   }
 
   .divDeleteButton {
-    margin-left: -65px;
+    margin-left: 85px;
     width: 200px;
     height: 90px;
   }

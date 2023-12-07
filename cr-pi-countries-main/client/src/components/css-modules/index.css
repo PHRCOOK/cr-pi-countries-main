@@ -11,8 +11,8 @@ body {
   margin-top: 10px;
   display: flex;
   background-image: url("C:\Users\USUARIO\Desktop\cr-pi-countries-main\cr-pi-countries-main\client\src\assets\Ciudades2.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-size: 110%;
+  background-repeat: repeat;
 }
 
 h1 {

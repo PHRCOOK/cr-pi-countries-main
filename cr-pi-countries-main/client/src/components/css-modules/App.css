@@ -1,9 +1,6 @@
 #root {
-  max-width: 1280px;
-  margin: auto;
-  margin-top: -5px;
-  padding: 2rem;
-  padding-right: -2rem;
+  max-width: 1220px;
+  margin: 15px auto;
   text-align: center;
 }
 
@@ -11,9 +8,8 @@
   padding: 2em;
 }
 
-@media screen and (min-width: 769px) and (max-width: 1280px) {
+@media screen and (min-width: 769px) and (max-width: 1241px) {
   #root {
-    margin-top: 0;
     padding: 1, 5rem;
   }
 
@@ -25,7 +21,6 @@
 /* Estilos para pantallas medianas */
 @media screen and (max-width: 768px) {
   #root {
-    margin-top: 10px;
     padding: 1rem;
   }
 
@@ -37,7 +32,6 @@
 /* Estilos para pantallas pequeñas */
 @media screen and (max-width: 480px) {
   #root {
-    margin-top: 10px;
     padding: 0.5rem;
   }
 

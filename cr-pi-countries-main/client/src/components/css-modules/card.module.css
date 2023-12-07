@@ -16,6 +16,7 @@
   color: #eee;
   background-color: rgba(3, 3, 3, 0.225);
   box-shadow: 0px 4px 20px 0px rgb(0, 0, 0);
+  transition: transform 2.5s;
 }
 
 .cardContainer:hover {
@@ -30,6 +31,7 @@
     0,
     0.295
   ); /* Cambia el color de fondo al pasar el cursor */
+  transform: rotateY(360deg);
 }
 
 .image {
@@ -37,13 +39,8 @@
   height: 80px;
   margin-bottom: 30px;
   object-fit: cover;
-  transition: transform 0.5s;
 }
 
-.image:hover {
-  border-radius: 10px;
-  transform: scale(1.2);
-}
 .name {
   font-size: 18px;
   text-align: left;
