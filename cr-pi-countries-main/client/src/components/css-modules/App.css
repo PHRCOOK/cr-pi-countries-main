@@ -11,7 +11,7 @@
   padding: 2em;
 }
 
-@media screen and (min-width: 769px) and (max-width: 1241px) {
+@media screen and (min-width: 769px) and (max-width: 1280px) {
   #root {
     margin-top: 0;
     padding: 1, 5rem;
