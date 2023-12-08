@@ -1,6 +1,6 @@
 #root {
   max-width: 1300px;
-  margin: 15px auto;
+  margin: -20px auto;
   padding: 2rem;
   padding-right: -2rem;
   text-align: center;
@@ -39,7 +39,7 @@
 @media screen and (max-width: 480px) {
   #root {
     padding: 0.5rem;
-    margin: 10px auto;
+    margin: 10px 75px;
   }
 
   .card {

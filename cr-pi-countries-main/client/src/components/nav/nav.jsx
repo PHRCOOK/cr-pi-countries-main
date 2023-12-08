@@ -220,6 +220,42 @@ const Nav = () => {
             <button className={styles.menuOrder1} onClick={handleOrderAlfDesc}>
               Alfabetico Descendente
             </button>
+            <aside className={styles.menuFilter}>
+              <div className={styles.menuTitle}>
+                <h2>Filtros</h2>
+              </div>
+              <select
+                name="selectContinent"
+                title="Filter by Continent"
+                onChange={handleFilterContinent}
+                value={valorSelect.selectContinent}
+              >
+                <option value="" disabled>
+                  Filtro por continente
+                </option>
+                {continents?.map((continent, index) => (
+                  <option key={index} value={continent}>
+                    {continent}
+                  </option>
+                ))}
+              </select>
+              <select
+                name="selectActivity"
+                title="Filter by Activities"
+                onChange={handleFilterActivities}
+                value={valorSelect.selectActivity}
+              >
+                <option value="" disabled>
+                  Filtro de actividades
+                </option>
+                {activitiesMenu?.map((activity, index) => (
+                  <option key={index} value={activity}>
+                    {activity}
+                  </option>
+                ))}
+              </select>
+              <button onClick={handleresetFilter}>Limpiar filtros</button>
+            </aside>
           </div>
           <div>
             <button className={styles.menuOrder1} onClick={handleOrderPopAsc}>
@@ -230,42 +266,6 @@ const Nav = () => {
             </button>
           </div>
 
-          <aside className={styles.menuFilter}>
-            <div className={styles.menuTitle}>
-              <h2>Filtros</h2>
-            </div>
-            <select
-              name="selectContinent"
-              title="Filter by Continent"
-              onChange={handleFilterContinent}
-              value={valorSelect.selectContinent}
-            >
-              <option value="" disabled>
-                Filtro por continente
-              </option>
-              {continents?.map((continent, index) => (
-                <option key={index} value={continent}>
-                  {continent}
-                </option>
-              ))}
-            </select>
-            <select
-              name="selectActivity"
-              title="Filter by Activities"
-              onChange={handleFilterActivities}
-              value={valorSelect.selectActivity}
-            >
-              <option value="" disabled>
-                Filtro de actividades
-              </option>
-              {activitiesMenu?.map((activity, index) => (
-                <option key={index} value={activity}>
-                  {activity}
-                </option>
-              ))}
-            </select>
-            <button onClick={handleresetFilter}>Limpiar filtros</button>
-          </aside>
           <aside className={styles.delete}>
             <div className={styles.divDeleteButton}>
               <button
