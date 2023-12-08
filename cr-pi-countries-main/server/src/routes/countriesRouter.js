@@ -1,14 +1,18 @@
-const {Router} = require("express")
-const getCountries = require("../handlers/getCountries")
-const getCountry = require("../handlers/getCountry")
+const { Router } = require("express");
+const getCountries = require("../handlers/getCountries");
+const getCountry = require("../handlers/getCountry");
 
-const countriesRouter = Router()
+const countriesRouter = Router();
 
 //Se atienden las peticiones GET a la ruta "/countries" : llama el handler getCountries
-countriesRouter.get("/", getCountries)
+countriesRouter.get("/", getCountries);
 
 //se atienden las peticiones GET a la ruta "/countries" con el parametro "idPais" : llama el handler getCountry
-countriesRouter.get("/:idPais", getCountry)
+countriesRouter.get("/:idPais", getCountry);
+
+//se atienden las peticiones GET a la ruta "/countries" con el parametro "name" : llama el handler getCountries
+
+countriesRouter.get(`/name?=" "`, getCountries);
 
 //Se exportan las rutas de /countries
-module.exports = countriesRouter
+module.exports = countriesRouter;
