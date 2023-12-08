@@ -40,7 +40,7 @@
   height: 40px;
   width: 175px;
   margin-left: -125px;
-  margin-top: 15px;
+  margin-top: 10px;
   box-shadow: 0px 4px 20px 0px rgb(4, 4, 4);
 }
 .divDeleteButton {
@@ -52,7 +52,8 @@
 
 .deleteButton {
   background-color: rgba(255, 255, 255, 0.352);
-  color: rgb(253, 253, 253);
+  color: rgb(0, 0, 0);
+  font-weight: bolder;
   border-radius: 10px;
   width: 175px;
   height: 45px;
