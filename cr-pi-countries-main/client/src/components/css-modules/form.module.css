@@ -230,7 +230,7 @@ img:hover::after {
 }
 
 /* Estilos para pantallas medianas */
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 480px) and (max-width: 768px) {
   .container {
     min-width: 60vw;
     width: 70vw;
@@ -246,6 +246,7 @@ img:hover::after {
 /* Estilos para pantallas pequeñas */
 @media screen and (max-width: 480px) {
   .container {
+    margin-left: 0px;
     min-width: 80vw;
     width: 90vw;
   }

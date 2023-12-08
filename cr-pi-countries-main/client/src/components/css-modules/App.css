@@ -1,6 +1,8 @@
 #root {
-  max-width: 1220px;
+  max-width: 1300px;
   margin: 15px auto;
+  padding: 2rem;
+  padding-right: -2rem;
   text-align: center;
 }
 
@@ -8,9 +10,11 @@
   padding: 2em;
 }
 
-@media screen and (min-width: 769px) and (max-width: 1241px) {
+@media screen and (min-width: 769px) and (max-width: 1280px) {
   #root {
     padding: 1, 5rem;
+    max-width: 900px;
+    margin: 10px auto;
   }
 
   .card {
@@ -19,9 +23,11 @@
 }
 
 /* Estilos para pantallas medianas */
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 481px) and (max-width: 768px) {
   #root {
     padding: 1rem;
+    margin: 15px 100px;
+    margin: 10px auto;
   }
 
   .card {
@@ -33,6 +39,7 @@
 @media screen and (max-width: 480px) {
   #root {
     padding: 0.5rem;
+    margin: 10px auto;
   }
 
   .card {

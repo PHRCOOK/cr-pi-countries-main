@@ -258,11 +258,11 @@
 
   .divDeleteSelector {
     width: 200px;
-    margin-left: -25px;
+    margin-left: -325px;
   }
 
   .divDeleteButton {
-    margin-left: 85px;
+    margin-left: -65px;
     width: 200px;
     height: 90px;
   }
@@ -303,11 +303,11 @@
 
   .divDeleteSelector {
     width: 150px;
-    margin-left: -235px;
+    margin-left: -435px;
   }
 
   .divDeleteButton {
-    margin-left: -45px;
+    margin-left: -145px;
     width: 150px;
     height: 70px;
   }
@@ -347,13 +347,13 @@
 
   .divDeleteSelector {
     width: 125px;
-    margin-left: -350px;
+    margin-left: -550px;
   }
 
   .divDeleteButton {
     width: 125px;
     height: 30px;
-    margin-left: -140px;
+    margin-left: -240px;
   }
 
   .deleteButton {
