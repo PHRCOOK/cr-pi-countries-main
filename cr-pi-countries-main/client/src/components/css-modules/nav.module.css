@@ -39,11 +39,12 @@
   border: black solid 3px;
   height: 40px;
   width: 175px;
-  margin-left: -225px;
+  margin-left: -125px;
   margin-top: 15px;
   box-shadow: 0px 4px 20px 0px rgb(4, 4, 4);
 }
 .divDeleteButton {
+  margin-left: 50px;
   border-radius: 20px;
   width: 178px;
   height: 45px;
