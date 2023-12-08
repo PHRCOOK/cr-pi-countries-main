@@ -262,7 +262,7 @@ const Form = () => {
                     className={styles.btnDelete}
                     value={element}
                   >
-                    x
+                    Borrar
                   </button>
                 </span>
               ))}

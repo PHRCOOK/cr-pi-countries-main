@@ -34,7 +34,7 @@
 }
 .divDeleteSelector {
   background-color: rgba(255, 255, 255, 0.352);
-  color: white;
+  color: rgb(0, 0, 0);
   border-radius: 5px;
   border: black solid 3px;
   height: auto;

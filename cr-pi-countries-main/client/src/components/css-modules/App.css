@@ -39,7 +39,7 @@
 @media screen and (max-width: 480px) {
   #root {
     padding: 0.5rem;
-    margin: 10px 75px;
+    margin: 10px 50px;
   }
 
   .card {
