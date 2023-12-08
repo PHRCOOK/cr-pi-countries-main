@@ -22,7 +22,7 @@
 }
 @media screen and (min-width: 769px) and (max-width: 940px) {
   .cardsContainer {
-    width: 110%;
+    width: 100%;
     margin-left: 40px;
   }
 }
