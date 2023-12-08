@@ -278,11 +278,7 @@ const Nav = () => {
               </button>
             </div>
             <div>
-              <select
-                multiple
-                className={styles.divDeleteSelector}
-                id="activitySelect"
-              >
+              <select className={styles.divDeleteSelector} id="activitySelect">
                 <option value="">Elija Actividad a Eliminar</option>
                 {activitiesDelete.map((activity) => (
                   <option key={activity.id} value={activity.id}>
