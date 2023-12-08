@@ -28,7 +28,7 @@
 }
 
 .delete {
-  width: 400px;
+  width: -100px;
   margin-top: -500px;
   margin-left: 1100px;
 }
@@ -39,12 +39,12 @@
   border: black solid 3px;
   height: 40px;
   width: 175px;
-  margin-left: -125px;
+  margin-left: 5px;
   margin-top: 10px;
   box-shadow: 0px 4px 20px 0px rgb(4, 4, 4);
 }
 .divDeleteButton {
-  margin-left: 50px;
+  margin-left: 5px;
   border-radius: 20px;
   width: 178px;
   height: 45px;
@@ -269,14 +269,13 @@
 /* Estilos para pantallas grandes */
 @media screen and (min-width: 769px) and (max-width: 1280px) {
   .delete {
-    width: 400px;
     margin-top: -500px;
     margin-left: 810px;
   }
 
   .divDeleteSelector {
     width: 200px;
-    margin-left: -325px;
+    margin-left: -60px;
   }
 
   .divDeleteButton {
@@ -314,14 +313,13 @@
 /* Estilos para pantallas medianas */
 @media screen and (min-width: 481px) and (max-width: 768px) {
   .delete {
-    width: 300px;
     margin-top: -400px;
     margin-left: 710px;
   }
 
   .divDeleteSelector {
     width: 150px;
-    margin-left: -435px;
+    margin-left: -145px;
   }
 
   .divDeleteButton {
@@ -358,14 +356,13 @@
 /* Estilos para pantallas pequeñas */
 @media screen and (max-width: 480px) {
   .delete {
-    width: 200px;
     margin-top: -300px;
     margin-left: 600px;
   }
 
   .divDeleteSelector {
     width: 125px;
-    margin-left: -550px;
+    margin-left: -350px;
   }
 
   .divDeleteButton {
