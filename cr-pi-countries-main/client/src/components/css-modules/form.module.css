@@ -247,8 +247,8 @@ img:hover::after {
 @media screen and (max-width: 480px) {
   .container {
     margin-left: 0px;
-    min-width: 80vw;
-    width: 90vw;
+    min-width: 50vw;
+    width: 120%;
   }
 
   .name,
