@@ -20,9 +20,15 @@
     margin-left: -40px;
   }
 }
-@media screen and (min-width: 769px) and (max-width: 940px) {
+@media screen and (min-width: 814px) and (max-width: 940px) {
   .cardsContainer {
     width: 100%;
+    margin-left: 40px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 813px) {
+  .cardsContainer {
+    width: 110%;
     margin-left: 40px;
   }
 }
