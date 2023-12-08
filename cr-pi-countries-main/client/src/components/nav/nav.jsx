@@ -205,7 +205,7 @@ const Nav = () => {
                 Buscar
               </button>
               <span onClick={handleGoToLanding} className={styles.goToLanding}>
-                SALIR
+                Salir
               </span>
             </>
           ) : null}

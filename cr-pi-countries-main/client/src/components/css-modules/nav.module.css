@@ -181,6 +181,7 @@
 }
 
 .goToActivities {
+  background-color: #00000096;
   text-decoration: none;
   color: #fff;
   font-weight: 400;
@@ -209,6 +210,7 @@
 }
 
 .goToLanding {
+  background-color: #00000096;
   text-decoration: none;
   color: #fff;
   font-weight: 400;
