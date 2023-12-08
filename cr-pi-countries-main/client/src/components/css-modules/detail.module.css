@@ -18,7 +18,7 @@
   flex-direction: column;
   border: #333 solid 3px;
   border-radius: 10px;
-  background-image: url("C:\Users\USUARIO\Desktop\cr-pi-countries-main\cr-pi-countries-main\client\src\assets\image1170x530cropped.jpg");
+  background-image: url("C:\Users\USUARIO\Desktop\cr-pi-countries-main\cr-pi-countries-main\client\src\assets\61RSQAifN0L._AC_UF894,1000_QL80_.jpg");
   background-size: cover;
   transition: all 1s ease; /* Agregado para suavizar la transición del efecto hover */
   box-shadow: 0px 4px 30px 0px rgb(0, 0, 0);
@@ -26,7 +26,7 @@
 
 .detailContainer:hover {
   transform: scale(1.05); /* Aumenta el tamaño del contenedor */
-  background-image: url("C:\Users\USUARIO\Desktop\cr-pi-countries-main\cr-pi-countries-main\client\src\assets\WAU3AN6RQNFXDKECYXO3L57RJA.avif");
+  background-image: url("C:\Users\USUARIO\Desktop\cr-pi-countries-main\cr-pi-countries-main\client\src\assets\61jt6czhTrL._AC_UF894,1000_QL80_.jpg");
   background-size: cover;
   box-shadow: 0px 4px 30px 0px rgb(255, 255, 255);
 }
