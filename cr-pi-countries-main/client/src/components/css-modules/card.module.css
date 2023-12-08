@@ -14,7 +14,7 @@
   user-select: none;
   touch-action: manipulation;
   color: #eee;
-  background-color: rgba(3, 3, 3, 0.225);
+  background-image: url("C:\Users\USUARIO\Desktop\cr-pi-countries-main\cr-pi-countries-main\client\src\assets\images.jpeg");
   box-shadow: 0px 4px 20px 0px rgb(0, 0, 0);
   transition: transform 2.5s;
 }
@@ -24,13 +24,8 @@
   color: #fff;
   filter: brightness(110%);
   box-shadow: 0px 4px 20px 0px rgb(255, 254, 254);
-  transform: scale(1.05); /* Aumenta el tamaño del contenedor */
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.295
-  ); /* Cambia el color de fondo al pasar el cursor */
+
+  background-image: url("C:\Users\USUARIO\Desktop\cr-pi-countries-main\cr-pi-countries-main\client\src\assets\b90ae9b962dbcc989e2bbbf8558a440c.jpg");
   transform: rotateY(360deg);
 }
 
