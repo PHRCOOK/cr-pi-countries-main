@@ -59,8 +59,6 @@ const Nav = () => {
   //estados locales para el control de los inputs
   const [valueInput, setValueInput] = useState("");
   const [criterio, setCriterio] = useState({});
-  const [cheked, setCheked] = useState(true);
-
   const { continents } = useSelector((state) => state);
   const { activities } = useSelector((state) => state);
   const { countries } = useSelector((state) => state);
