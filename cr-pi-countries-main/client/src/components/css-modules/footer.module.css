@@ -37,7 +37,7 @@ footer {
 }
 
 /* Estilos para pantallas medianas */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 481px) and (max-width: 768px) {
   footer {
     flex-direction: column;
     padding: 5px;
@@ -59,7 +59,7 @@ footer {
     padding-right: 5px;
     padding-left: 5px;
     width: calc(100% - 10px);
-    margin-left: -100px;
+    margin-left: -50px;
   }
 
   .container {

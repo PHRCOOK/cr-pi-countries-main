@@ -13,7 +13,7 @@
 
 .img2 {
   position: absolute;
-  top: 95px;
+  top: 150px;
   left: -140px;
   z-index: 1;
   max-height: 300px;
@@ -62,8 +62,22 @@
   }
 }
 
+@media screen and (max-width: 769px) and (max-width: 1280px) {
+  .imageContainer {
+    height: 360px;
+  }
+
+  .img2 {
+    max-height: 200px;
+  }
+
+  .buttonInicio {
+    width: 150px;
+  }
+}
+
 /* Estilos para pantallas medianas */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 481px) and (max-width: 768px) {
   .imageContainer {
     height: 360px;
   }
@@ -78,16 +92,18 @@
 }
 
 /* Estilos para pantallas pequeñas */
-@media screen and (width: 480px) {
+@media screen and (max-width: 480px) {
   .imageContainer {
     height: 240px;
   }
 
   .img2 {
     max-height: 150px;
+    margin-left: 50px;
   }
 
   .buttonInicio {
     width: 100px;
+    margin-left: 0px;
   }
 }
