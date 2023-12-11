@@ -9,7 +9,6 @@ import {
   orderCountryPop,
   resetError,
   setPage,
-  deleteActivity,
 } from "../../redux/actions";
 import {
   getCountries,
@@ -17,8 +16,8 @@ import {
   filterByContinent,
   resetFilter,
 } from "../../redux/actions";
+import { deleteActivityThunk } from "../../redux/thunks";
 import { memo, useEffect, useState } from "react";
-import axios from "axios";
 
 //renderiza la navbar y la sidebar, hace los dispatch para la busqueda el filtrado y el ordenamiento
 const Nav = () => {
@@ -35,19 +34,8 @@ const Nav = () => {
     selectActivity: "",
   });
 
-  useEffect(() => {
-    const fetchActivities = async () => {
-      const response = await axios.get(`/activities`);
-      dispatch(getActivities(response.data));
-    };
-
-    fetchActivities();
-  }, [dispatch]);
-
-  //elimina una actividad y actualiza el estado global de activities
   const handleDelete = async (id) => {
-    await axios.delete(`/activities/${id}`);
-    dispatch(deleteActivity(id));
+    dispatch(deleteActivityThunk(id));
     // Restablecer los campos de filtro por actividad y el selector de handleDelete
     setValorSelect({
       ...valorSelect,

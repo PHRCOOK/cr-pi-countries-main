@@ -23,7 +23,7 @@ export const deleteActivity = (id) => {
   };
 };
 
-//menejo de errores de las actions
+//manejo de errores de las actions
 export const handleError = (error) => ({
   type: ERROR,
   payload: error,
