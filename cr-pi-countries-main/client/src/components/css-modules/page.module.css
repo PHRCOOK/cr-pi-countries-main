@@ -18,6 +18,10 @@
     width: 95%;
     margin-left: 20px;
   }
+  .pageSelector {
+    flex-grow: 1;
+    margin-bottom: -3px;
+  }
 }
 @media screen and (min-width: 814px) and (max-width: 940px) {
   .cardsContainer {
