@@ -51,7 +51,7 @@
 }
 
 .deleteButton {
-  background-color: rgba(255, 255, 255, 0.352);
+  background-color: rgba(218, 204, 204, 0.247);
   color: rgb(0, 0, 0);
   font-weight: bolder;
   border-radius: 10px;
@@ -270,7 +270,7 @@
 /* Estilos para pantallas grandes */
 @media screen and (min-width: 769px) and (max-width: 1280px) {
   .delete {
-    margin-top: -500px;
+    margin-top: -550px;
     margin-left: 800px;
   }
 
@@ -315,7 +315,7 @@
 /* Estilos para pantallas medianas */
 @media screen and (min-width: 481px) and (max-width: 768px) {
   .delete {
-    margin-top: -400px;
+    margin-top: -450px;
     margin-left: 710px;
   }
 
@@ -359,8 +359,8 @@
 /* Estilos para pantallas pequeñas */
 @media screen and (max-width: 480px) {
   .delete {
-    margin-top: -350px;
-    margin-left: 600px;
+    margin-top: -400px;
+    margin-left: 710px;
   }
 
   .divDeleteSelector {
@@ -370,7 +370,7 @@
 
   .divDeleteButton {
     width: 125px;
-    height: 30px;
+    height: 40px;
     margin-left: -240px;
   }
 
@@ -397,6 +397,6 @@
   }
 
   .goToLanding {
-    margin-left: 100px;
+    margin-left: 200px;
   }
 }

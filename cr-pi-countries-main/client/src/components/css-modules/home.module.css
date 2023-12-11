@@ -107,11 +107,26 @@
     width: 600px;
   }
 
-  .btnPage,
-  .btnPage1,
-  .btnPage2 {
+  .btnPage {
     width: 10%;
+    margin: 5px;
+    margin-left: 5px;
     font-size: auto;
+    text-align: center;
+  }
+  .btnPage2 {
+    width: 15%;
+    margin: 5px;
+    margin-left: 5px;
+    font-size: auto;
+    text-align: center;
+  }
+  .btnPage1 {
+    width: 20%;
+    margin: 5px;
+    margin-left: -5px;
+    font-size: auto;
+    text-align: center;
   }
 }
 
@@ -127,11 +142,26 @@
     width: 600px;
   }
 
-  .btnPage,
-  .btnPage1,
-  .btnPage2 {
+  .btnPage {
     width: 10%;
+    margin: 5px;
+    margin-left: 5px;
     font-size: auto;
+    text-align: center;
+  }
+  .btnPage2 {
+    width: 15%;
+    margin: 5px;
+    margin-left: 5px;
+    font-size: auto;
+    text-align: center;
+  }
+  .btnPage1 {
+    width: 20%;
+    margin: 5px;
+    margin-left: -5px;
+    font-size: auto;
+    text-align: center;
   }
 }
 
@@ -144,22 +174,28 @@
   .pageSelector {
     margin-top: 30px;
     margin-left: -50px;
-    width: 320px;
+    width: 400px;
     height: 180px;
   }
 
-  .btnPage,
-  .btnPage2 {
+  .btnPage {
     width: 10%;
     margin: 5px;
     margin-left: 5px;
     font-size: auto;
     text-align: center;
   }
-  .btnPage1 {
-    width: 20%;
+  .btnPage2 {
+    width: 30%;
     margin: 5px;
-    margin-left: -5px;
+    margin-left: 5px;
+    font-size: auto;
+    text-align: center;
+  }
+  .btnPage1 {
+    width: 25%;
+    margin: 5px;
+    margin-left: -4px;
     font-size: auto;
     text-align: center;
   }

@@ -228,9 +228,22 @@ img:hover::after {
   background: #ddd;
   border: 1px solid aliceblue;
 }
+/* Estilos para pantallas grandes */
+@media screen and (min-width: 769px) and (max-width: 1280px) {
+  .container {
+    min-width: 70vw;
+    width: 90vw;
+  }
+
+  .name,
+  .duration,
+  .input {
+    width: 150px;
+  }
+}
 
 /* Estilos para pantallas medianas */
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (min-width: 481px) and (max-width: 768px) {
   .container {
     min-width: 60vw;
     width: 70vw;
