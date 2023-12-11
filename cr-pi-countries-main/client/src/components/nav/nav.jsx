@@ -9,15 +9,14 @@ import {
   orderCountryPop,
   resetError,
   setPage,
-} from "../../redux/actions";
-import {
   getCountries,
   filterByActivities,
   filterByContinent,
   resetFilter,
 } from "../../redux/actions";
 import { deleteActivityThunk } from "../../redux/thunks";
-import { memo, useEffect, useState } from "react";
+import { memo, useEffect } from "react";
+import { useState } from "react";
 
 //renderiza la navbar y la sidebar, hace los dispatch para la busqueda el filtrado y el ordenamiento
 const Nav = () => {
@@ -25,8 +24,6 @@ const Nav = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const activitiesDelete = useSelector((state) => state.activities);
-
-  //hace un fetch para obtener las actividades y las guarda en el estado global
 
   //estado local para el control de los menues desplegables de continents y activities
   const [valorSelect, setValorSelect] = useState({
@@ -36,17 +33,11 @@ const Nav = () => {
 
   const handleDelete = async (id) => {
     dispatch(deleteActivityThunk(id));
-    // Restablecer los campos de filtro por actividad y el selector de handleDelete
-    setValorSelect({
-      ...valorSelect,
-      selectActivity: "",
-    });
-    window.location.reload();
   };
 
   //estados locales para el control de los inputs
   const [valueInput, setValueInput] = useState("");
-  const [criterio, setCriterio] = useState({});
+  const [criterio] = useState({});
   const { continents } = useSelector((state) => state);
   const { activities } = useSelector((state) => state);
   const { countries } = useSelector((state) => state);
