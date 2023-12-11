@@ -31,8 +31,19 @@ const Nav = () => {
     selectActivity: "",
   });
 
-  const handleDelete = async (id) => {
-    dispatch(deleteActivityThunk(id));
+  // Inicialmente, 'selectedActivity' se establece en una cadena vacía
+  const [selectedActivity, setSelectedActivity] = useState("");
+
+  // Esta función se encarga de eliminar la actividad seleccionada
+  const handleDelete = async () => {
+    await dispatch(deleteActivityThunk(selectedActivity));
+    dispatch(getActivities());
+  };
+
+  // Esta función se ejecuta cuando cambia el valor de un elemento select
+  // Actualiza la variable de estado 'selectedActivity' con el nuevo valor
+  const handleSelectChange = (event) => {
+    setSelectedActivity(event.target.value);
   };
 
   //estados locales para el control de los inputs
@@ -245,17 +256,17 @@ const Nav = () => {
 
           <aside className={styles.delete}>
             <div className={styles.divDeleteButton}>
-              <button
-                className={styles.deleteButton}
-                onClick={() =>
-                  handleDelete(document.querySelector("#activitySelect").value)
-                }
-              >
+              <button className={styles.deleteButton} onClick={handleDelete}>
                 Eliminar Actividad
               </button>
             </div>
             <div>
-              <select className={styles.divDeleteSelector} id="activitySelect">
+              <select
+                className={styles.divDeleteSelector}
+                id="activitySelect"
+                value={selectedActivity}
+                onChange={handleSelectChange}
+              >
                 <option value="">Elija Actividad a Eliminar</option>
                 {activitiesDelete.map((activity) => (
                   <option key={activity.id} value={activity.id}>
