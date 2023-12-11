@@ -95,7 +95,7 @@
   border: #aaa inset 3px;
   border-radius: 3px;
 }
-
+/* Estilos para pantallas grandes */
 @media screen and (min-width: 769px) and (max-width: 1280px) {
   .principalContainer {
     margin-left: 100px;

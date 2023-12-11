@@ -13,6 +13,8 @@
   flex-grow: 1;
   margin-bottom: -3px;
 }
+
+/* Estilos para pantallas grandes */
 @media screen and (min-width: 941px) and (max-width: 1280px) {
   .cardsContainer {
     width: 95%;
@@ -23,12 +25,14 @@
     margin-bottom: -3px;
   }
 }
+/* Estilos para pantallas grandes */
 @media screen and (min-width: 814px) and (max-width: 940px) {
   .cardsContainer {
     width: 100%;
     margin-left: 40px;
   }
 }
+/* Estilos para pantallas grandes */
 @media screen and (min-width: 769px) and (max-width: 813px) {
   .cardsContainer {
     width: 110%;

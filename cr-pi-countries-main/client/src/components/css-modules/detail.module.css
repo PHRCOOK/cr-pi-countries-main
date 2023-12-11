@@ -93,6 +93,7 @@
   margin-top: 0px;
   font-style: normal;
 }
+/* Estilos para pantallas grandes */
 @media screen and (min-width: 769px) and (max-width: 1280px) {
   .detailContainer {
     min-width: 500px;

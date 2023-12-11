@@ -53,6 +53,8 @@
   margin-top: 1px;
   margin-bottom: 1px;
 }
+
+/* Estilos para pantallas grandes */
 @media screen and (min-width: 769px) and (max-width: 1280px) {
   .cardContainer {
     width: 150px;
