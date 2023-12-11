@@ -29,7 +29,7 @@
 
 .delete {
   width: -100px;
-  margin-top: -500px;
+  margin-top: -470px;
   margin-left: 1100px;
 }
 .divDeleteSelector {
@@ -277,17 +277,18 @@
   .divDeleteSelector {
     width: 200px;
     margin-left: -60px;
+    margin-top: -150px;
   }
 
   .divDeleteButton {
-    margin-left: -65px;
+    margin-left: -60px;
     width: 200px;
     height: 90px;
   }
 
   .deleteButton {
     width: 200px;
-    height: 70px;
+    height: 50px;
   }
 
   .menuContainer {
@@ -358,7 +359,7 @@
 /* Estilos para pantallas pequeñas */
 @media screen and (max-width: 480px) {
   .delete {
-    margin-top: -300px;
+    margin-top: -350px;
     margin-left: 600px;
   }
 
