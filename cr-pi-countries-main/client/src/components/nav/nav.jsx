@@ -34,7 +34,7 @@ const Nav = () => {
   // Inicialmente, 'selectedActivity' se establece en una cadena vacía
   const [selectedActivity, setSelectedActivity] = useState("");
 
-  // Esta función se encarga de eliminar la actividad seleccionada
+  // Esta función se encarga de eliminar la actividad seleccionada y recargar la actividad no eliminada
   const handleDelete = async () => {
     await dispatch(deleteActivityThunk(selectedActivity));
     dispatch(getActivities());
