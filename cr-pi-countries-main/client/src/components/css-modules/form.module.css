@@ -238,7 +238,7 @@ img:hover::after {
   .name,
   .duration,
   .input {
-    width: 150px;
+    width: 350px;
   }
 }
 
@@ -252,7 +252,7 @@ img:hover::after {
   .name,
   .duration,
   .input {
-    width: 150px;
+    width: 200px;
   }
 }
 
@@ -267,6 +267,6 @@ img:hover::after {
   .name,
   .duration,
   .input {
-    width: 100px;
+    width: 150px;
   }
 }
