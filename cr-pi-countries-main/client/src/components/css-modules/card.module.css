@@ -96,12 +96,12 @@
 /* Estilos para pantallas pequeñas */
 @media screen and (max-width: 480px) {
   .cardContainer {
-    width: 100px;
-    height: 150px;
+    width: 150px;
+    height: 200px;
   }
 
   .image {
-    height: 50px;
+    height: 60px;
   }
 
   .name {
