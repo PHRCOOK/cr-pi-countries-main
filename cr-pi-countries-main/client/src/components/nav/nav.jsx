@@ -17,6 +17,7 @@ import {
 import { deleteActivityThunk } from "../../redux/thunks";
 import { memo, useEffect } from "react";
 import { useState } from "react";
+import PATHROUTES from "../helpers/Pathroutes";
 
 //renderiza la navbar y la sidebar, hace los dispatch para la busqueda el filtrado y el ordenamiento
 const Nav = () => {
@@ -127,12 +128,12 @@ const Nav = () => {
 
   const handleGoToLanding = () => {
     dispatch(resetError());
-    navigate("/");
+    navigate(PATHROUTES.ROOT);
   };
 
   const handleGoToActivities = () => {
     dispatch(resetError());
-    navigate("/activities");
+    navigate(PATHROUTES.FORM);
   };
 
   const handleGoToHome = () => {
@@ -146,7 +147,7 @@ const Nav = () => {
       selectActivity: "",
       selecOrderDesc: false,
     });
-    navigate("/home");
+    navigate(PATHROUTES.HOME);
   };
 
   // Funciones para manejar el ordenamiento, filtrado, búsqueda y navegación
@@ -162,7 +163,7 @@ const Nav = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [countries, criterio, errors]);
 
-  return location !== "/" ? (
+  return location !== PATHROUTES.ROOT ? (
     // Renderiza la barra de navegación y la barra lateral
     // El contenido se renderiza en función de la ubicación y el estado de error
     // El código de renderización se define aquí...
@@ -170,12 +171,12 @@ const Nav = () => {
       <header className={styles.headerContainer}>
         <h1>PAISES DEL MUNDO</h1>
         <nav className={styles.navBar}>
-          {location !== "/home" && (
+          {location !== PATHROUTES.HOME && (
             <span onClick={handleGoToHome} className={styles.goToHome}>
               Inicio
             </span>
           )}
-          {location === "/home" && !errors.stateError ? (
+          {location === PATHROUTES.HOME && !errors.stateError ? (
             <>
               <span
                 onClick={handleGoToActivities}
@@ -199,7 +200,7 @@ const Nav = () => {
           ) : null}
         </nav>
       </header>
-      {location === "/home" && !errors.stateError ? (
+      {location === PATHROUTES.HOME && !errors.stateError ? (
         <div className={styles.menuContainer}>
           <div>
             <button className={styles.menuOrder1} onClick={handleOrderAlfAsc}>

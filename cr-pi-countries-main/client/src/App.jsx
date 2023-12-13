@@ -10,6 +10,7 @@ import { getAllCountries } from "./redux/actions";
 import Home from "./components/home/home";
 import Error from "./components/error/error";
 import Form from "./components/form/form";
+import PATHROUTES from "./components/helpers/Pathroutes";
 import axios from "axios";
 
 axios.defaults.baseURL = "http://localhost:3001";
@@ -30,12 +31,12 @@ function App() {
     <div className="App">
       <Nav />
       <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/detail/:id" element={<Detail />} />
-        <Route path="/activities" element={<Form />} />
+        <Route path={PATHROUTES.ROOT} element={<LandingPage />} />
+        <Route path={PATHROUTES.HOME} element={<Home />} />
+        <Route path={PATHROUTES.DETAIL} element={<Detail />} />
+        <Route path={PATHROUTES.FORM} element={<Form />} />
         <Route
-          path="*"
+          path={PATHROUTES.ERROR}
           element={<Error status={404} message={"Not Found!"} />}
         />
       </Routes>
