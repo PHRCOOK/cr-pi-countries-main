@@ -2,3 +2,5 @@
 node_modules
 .vscode
 countries.session.sql
+FRONT.TXT
+BACK.TXT
