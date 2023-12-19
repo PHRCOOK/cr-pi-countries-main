@@ -3,7 +3,7 @@ const axios = require("axios");
 //se importa el modelo Contry desde la coneccion de secuelize en db
 const { Country } = require("../db");
 
-//se realiza una peticion a la api y puebla la basede da datos con la data recibida
+//se realiza una peticion a la api y puebla la base de datos con la data recibida
 //informa la evolucion del proceso por consola
 const populateDb = async () => {
   try {
