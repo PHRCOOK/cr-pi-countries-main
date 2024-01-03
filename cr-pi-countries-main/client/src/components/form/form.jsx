@@ -148,7 +148,7 @@ const Form = () => {
           description={
             errors.error.response
               ? error.response.data.error
-              : "Can’t connect to server"
+              : "No se puede conectar al servidor"
           }
         />
       ) : (
