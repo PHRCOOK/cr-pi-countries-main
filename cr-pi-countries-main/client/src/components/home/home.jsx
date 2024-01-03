@@ -87,7 +87,7 @@ const Home = () => {
       : setLocalError({
           status: "500",
           message: error?.message,
-          decription: "Failed to load resource",
+          decription: "Falla en carga de recursos",
         });
     !stateError &&
       setLocalError({
