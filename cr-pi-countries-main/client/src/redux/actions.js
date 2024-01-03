@@ -55,7 +55,7 @@ export const getActivities = () => async (dispatch) => {
   }
 };
 
-//haceuna request a la api de los countries que su nombre contenga el criterio de busqueda
+//hace una request a la api de los countries que su nombre contenga el criterio de busqueda
 export const getCountries = (criterio) => async (dispatch) => {
   try {
     const { data } = await axios(`/countries?name=${criterio}`);
