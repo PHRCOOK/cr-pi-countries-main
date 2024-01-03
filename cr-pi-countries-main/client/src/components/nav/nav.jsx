@@ -152,7 +152,6 @@ const Nav = () => {
 
   // Funciones para manejar el ordenamiento, filtrado, búsqueda y navegación
   // Cada función realiza un despacho para actualizar el estado de Redux
-  // Las funciones de manejo de eventos se definen aquí...
 
   useEffect(() => {
     if (!errors.stateError) {
@@ -166,7 +165,7 @@ const Nav = () => {
   return location !== PATHROUTES.ROOT ? (
     // Renderiza la barra de navegación y la barra lateral
     // El contenido se renderiza en función de la ubicación y el estado de error
-    // El código de renderización se define aquí...
+
     <>
       <header className={styles.headerContainer}>
         <h1>PAISES DEL MUNDO</h1>
