@@ -31,7 +31,7 @@ const {
 // postgresql://postgres:G-cgB6C1aA14DAg*f-3dAa*Gdg1*C6dd@monorail.proxy.rlwy.net:16864/railway
 
 const sequelize = new Sequelize(
-  `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_DATABASE}`,
+  `postgres://countries_8wad_user:uqy3WvGePweWcALvTdfeZmXnReLDi04n@dpg-cmbcetda73kc73bsm9ag-a/countries_8wad`,
   {
     logging: false,
     native: false,
