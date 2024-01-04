@@ -3,7 +3,18 @@ const { Sequelize } = require("sequelize");
 
 const fs = require("fs");
 const path = require("path");
-const { DB_USER, DB_PASSWORD, DB_HOST, DB_NAME } = process.env;
+const {
+  DB_USER,
+  DB_PASSWORD,
+  DB_HOST,
+  DB_PORT,
+  DB_DATABASE,
+  PGUSER,
+  PGPASSWORD,
+  PGDATABASE,
+  PGHOST,
+  PGPORT,
+} = process.env;
 
 //CONEXION BASE DE DATOS LOCAL
 
@@ -20,7 +31,7 @@ const { DB_USER, DB_PASSWORD, DB_HOST, DB_NAME } = process.env;
 // postgresql://postgres:G-cgB6C1aA14DAg*f-3dAa*Gdg1*C6dd@monorail.proxy.rlwy.net:16864/railway
 
 const sequelize = new Sequelize(
-  `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME}`,
+  `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_DATABASE}`,
   {
     logging: false,
     native: false,
