@@ -37,7 +37,6 @@ const Detail = () => {
   // Usamos el hook useEffect para llamar a getCountry cuando el componente se monta
   useEffect(() => {
     getCountry();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
