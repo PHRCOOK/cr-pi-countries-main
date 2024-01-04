@@ -3,27 +3,38 @@ const { Sequelize } = require("sequelize");
 
 const fs = require("fs");
 const path = require("path");
-const { DB_NAME, DB_USER, DB_PASSWORD, DB_HOST } = process.env;
+const {
+  DB_USER,
+  DB_PASSWORD,
+  DB_HOST,
+  PGUSER,
+  PGPASSWORD,
+  PGDATABASE,
+  PGHOST,
+  PGPORT,
+} = process.env;
 
 //CONEXION BASE DE DATOS LOCAL
 
-// const sequelize = new Sequelize(
-//   `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/countries`,
-//   {
-//     logging: false,
-//     native: false,
-//   }
-// );
-
-// CONEXION BASE DE DATOS REMOTO
-
 const sequelize = new Sequelize(
-  `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME}`,
+  `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/countries`,
   {
     logging: false,
     native: false,
   }
 );
+
+//CONEXION BASE DE DATOS REMOTO
+
+// postgresql://postgres:G-cgB6C1aA14DAg*f-3dAa*Gdg1*C6dd@monorail.proxy.rlwy.net:16864/railway
+
+// const sequelize = new Sequelize(
+//   `postgresql://${PGUSER}:${PGPASSWORD}@${PGHOST}:${PGPORT}/${PGDATABASE}`,
+//   {
+//     logging: false,
+//     native: false,
+//   }
+// );
 const basename = path.basename(__filename);
 
 const modelDefiners = [];
