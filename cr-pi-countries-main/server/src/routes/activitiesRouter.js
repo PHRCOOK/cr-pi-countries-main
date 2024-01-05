@@ -11,7 +11,7 @@ activitiesRouter.post("/", postActivity);
 //Se atienden las peticiones GET a la ruta /activities : se llama el handler getActivities
 activitiesRouter.get("/", getActivities);
 
-//Se atienden las peticiones DELETE a la ruta /activities/:name : se llama el handler deleteActivity
+//Se atienden las peticiones DELETE a la ruta /activities/:id : se llama el handler deleteActivity
 
 activitiesRouter.delete("/:id", deleteActivityHandler);
 
