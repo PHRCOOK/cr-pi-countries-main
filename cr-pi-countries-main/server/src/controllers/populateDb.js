@@ -9,10 +9,8 @@ const populateDb = async () => {
   try {
     console.log("Reading API...");
     //realiza la peticion a la API
-    // const { data } = await axios(`http://localhost:5000/countries`);
-
-    // BASE DE DATOS REMOTA
-    const { data } = await axios(`${BASE_API_URL}/countries`);
+    const { data } = await axios(`http://localhost:5000/countries`);
+    // const { data } = await axios(`${BASE_API_URL}/countries`); BASE DE DATOS REMOTA
     //prepara un arreglo con todos los datos obtenidos de la api
     console.log("Preparing data package...");
     const bulckData = data?.map((country) => {
