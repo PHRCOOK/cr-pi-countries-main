@@ -70,7 +70,8 @@
   border-bottom: #ddd;
   color: hsl(0, 0%, 100%);
   font-size: larger;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-weight: lighter;
   display: flex;
   flex-direction: column;
