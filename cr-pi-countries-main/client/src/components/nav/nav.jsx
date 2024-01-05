@@ -245,11 +245,11 @@ const Nav = () => {
             </aside>
           </div>
           <div>
-            <button className={styles.menuOrder1} onClick={handleOrderPopAsc}>
-              Poblacion Ascendente
-            </button>
             <button className={styles.menuOrder1} onClick={handleOrderPopDesc}>
               Poblacion Descendente
+            </button>
+            <button className={styles.menuOrder1} onClick={handleOrderPopAsc}>
+              Poblacion Ascendente
             </button>
           </div>
 
