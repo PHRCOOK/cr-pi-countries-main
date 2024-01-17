@@ -7,12 +7,12 @@
   align-items: center;
   width: 90%;
   min-height: 72.5vh;
+  margin-bottom: 20px;
 }
 
 .pageSelector {
   flex-grow: 1;
-  margin-top: 500px;
-  margin-bottom: -10px;
+  margin-bottom: -3px;
 }
 
 /* Estilos para pantallas grandes */
