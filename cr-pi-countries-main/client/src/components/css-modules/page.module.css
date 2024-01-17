@@ -11,8 +11,7 @@
 
 .pageSelector {
   flex-grow: 1;
-  margin-top: 100px;
-  margin-bottom: -3px;
+  margin-bottom: -10px;
 }
 
 /* Estilos para pantallas grandes */
