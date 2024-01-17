@@ -13,9 +13,9 @@ import Form from "./components/form/form";
 import PATHROUTES from "./components/helpers/Pathroutes";
 import axios from "axios";
 
-axios.defaults.baseURL = "http://localhost:3001";
-// axios.defaults.baseURL =
-//   "https://cr-pi-countries-main-server-production.up.railway.app";
+// axios.defaults.baseURL = "http://localhost:3001";
+axios.defaults.baseURL =
+  "https://cr-pi-countries-main-production-4014.up.railway.app/";
 function App() {
   const dispatch = useDispatch();
   const { countries } = useSelector((state) => state);
