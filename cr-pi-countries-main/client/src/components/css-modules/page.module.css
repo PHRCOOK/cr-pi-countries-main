@@ -11,6 +11,7 @@
 
 .pageSelector {
   flex-grow: 1;
+  margin-top: 50px;
   margin-bottom: -3px;
 }
 
