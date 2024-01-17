@@ -51,6 +51,7 @@
 /* Estilos para pantallas pequeñas */
 @media screen and (max-width: 480px) {
   .cardsContainer {
+    margin-top: 45 px;
     width: 100%;
     margin-left: 30px;
   }
