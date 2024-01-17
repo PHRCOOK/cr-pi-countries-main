@@ -1,5 +1,5 @@
 .principalContainer {
-  margin-top: 30px;
+  margin-top: -30px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
