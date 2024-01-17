@@ -10,7 +10,7 @@ import { getAllCountries } from "./redux/actions";
 import Home from "./components/home/home";
 import Error from "./components/error/error";
 import Form from "./components/form/form";
-import PATHROUTES from "./components/helpers/pathRoutes";
+import PATHROUTES from "./components/helpers/pathroutes";
 import axios from "axios";
 
 // axios.defaults.baseURL = "http://localhost:3001";

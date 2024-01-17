@@ -17,7 +17,7 @@ import {
 import { deleteActivityThunk } from "../../redux/thunks";
 import { memo, useEffect } from "react";
 import { useState } from "react";
-import PATHROUTES from "../helpers/pathRoutes";
+import PATHROUTES from "../helpers/pathroutes";
 
 //renderiza la navbar y la sidebar, hace los dispatch para la busqueda el filtrado y el ordenamiento
 const Nav = () => {
